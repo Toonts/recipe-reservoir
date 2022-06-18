@@ -1,2 +1,9 @@
 # recipe-reservoir
-A digital space to input recipes, and recall them based on available ingredients
+A digital space to input recipes, and recall them based on available ingredients.
+
+## Worked on by:
+- Daniel Brott
+- Mandy Mason
+- Alejandro Rivera
+- Mario Acevado
+- Lauren Main
