@@ -5,5 +5,5 @@ A digital space to input recipes, and recall them based on available ingredients
 - Daniel Brott
 - Mandy Mason
 - Alejandro Rivera
-- Mario Acevado
+- Mario Acevedo
 - Lauren Main
