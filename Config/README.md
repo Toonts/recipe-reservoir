@@ -17,4 +17,4 @@ A digital space to input recipes, and recall them based on available ingredients
 [Wireframe](https://replit.com/@MandyMason/Recipe-Reservoir#whiteboard.draw)
 
 ## Trello
-![Trello](https://trello.com/b/vDbVl64i/toonts)
+[Trello](https://trello.com/b/vDbVl64i/toonts)
