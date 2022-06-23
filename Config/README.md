@@ -8,6 +8,9 @@ A digital space to input recipes, and recall them based on available ingredients
 - Mario Acevedo
 - Lauren Main
 
+## User Stories on Trello
+[Trello](https://trello.com/b/vDbVl64i/toonts)
+
 ## Domain Model on Figma
 
 ![Domain Model](img/Recipe%20Reservoir%20(1).png)
@@ -16,5 +19,3 @@ A digital space to input recipes, and recall them based on available ingredients
 
 [Wireframe](https://replit.com/@MandyMason/Recipe-Reservoir#whiteboard.draw)
 
-## Trello
-[Trello](https://trello.com/b/vDbVl64i/toonts)
