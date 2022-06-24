@@ -27,11 +27,11 @@
     <main>
      
       <div class="name">
-        <input type="text" class="box" id="search-box" placeholder="Search by name"/> </div>
+        <input type="text" class="box" id="name" placeholder="Search by name"/> </div>
       <div class="ingredients">
-        <input type="text" class="box" id="search-box" placeholder="Search by ingredients" /> </div>
+        <input type="text" class="box" id="ingredients" placeholder="Search by ingredients" /> </div>
       <div class="rating">
-        <input type="text" class="box" id="search-box" placeholder="Search by rating"/> </div>
+        <input type="text" class="box" id="rating" placeholder="Search by rating"/> </div>
         <div class= "newrecipe"> <input type="submit" name="submit"/> </div>
 
       <section>
@@ -55,13 +55,13 @@
           <h3>Add a new recipe to your book! </h3>
           <fieldset>
           <label>Recipe Title  
-            <input type = "text" name = "title" required="required"/>
+            <input id = "title" type = "text" name = "title" required="required"/>
           </label>
           <label>Ingredients
-            <input id= "ingredients" type = "text" name = "ingredients" required="required"/>
+            <input id= "new-ingredients" type = "text" name = "ingredients" required="required"/>
           </label>
           <label> Instructions </label>
-            <textarea id= "instructions"  name = "instructions" required="required"> </textarea>
+            <input id= "instructions" type="text"  name = "instructions" required="required"> </textarea>
           
           </fieldset>
         </form>
