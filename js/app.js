@@ -23,8 +23,8 @@ Recipe.prototype.saveEachToLocalStorage = function (){
 
 }; 
 
-// let recipe1 = new Recipe("cake", "rake", "bake");
-// let recipe2 = new Recipe("cookie", "salmon", "pat");
+let recipe1 = new Recipe("cake", "rake", "bake");
+let recipe2 = new Recipe("cookie", "salmon", "pat");
 
 //save
 Recipe.prototype.saveAllToLocalStorage = function () {
