@@ -12,6 +12,8 @@ function render (){
     let tableRow = document.createElement ("tr");
     let tableData = document.createElement ("td");
     tableData.innerText = recipe.title;
+    tableRow.appendChild(tableData);
+    table.appendChild(tableRow);
   
   }
 
