@@ -5,6 +5,7 @@
 
 // Pull info from form into constructor function and save (put form in index.html)
 
+
 function render (){
   let table = document.getElementById ("table");
   for (let i=0; i < allRecipes.length; i++){
@@ -18,3 +19,4 @@ function render (){
   }
 
 }
+

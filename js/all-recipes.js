@@ -30,4 +30,3 @@ function renderIngredients() {
 console.log(this.ingredients);
 // let recipe3 = new Recipe ('cake', 'rake', 'bake');
   
-  
