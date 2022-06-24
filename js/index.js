@@ -1,3 +1,4 @@
+"use strict";
 // Call save & load when recipes are searched for
 
 // Render list of searched recipes

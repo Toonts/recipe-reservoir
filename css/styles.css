@@ -28,4 +28,9 @@ footer {
 
 }
 
+#ingredients, #instructions{
+  height: 300px;
+  width: 300px; 
+}
+
 
