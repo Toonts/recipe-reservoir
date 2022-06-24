@@ -8,19 +8,17 @@ The vision for Recipe Reservoir is to have an easy space to input and access rec
 
  - Allow users to input recipes including ingredients, directions, and a rating
  - Provide a search feature within local storage to access previously stored recipes
- - Allow users to add an image of their food
  - Users will be able to keep their recipes up to date by deleting old information
 
 ## Out
 
 - Searching recipes from other websites will not be possible
-- This site will not be mobile-friendly
 
 ## Minimum Viable Product
 - Take in user input to store recipes in local storage
 - Remove recipes from local storage
 - Search storage for saved recipes using title or ingredient
-- Ability to add images to recipe cards
+- Ability to add rating to recipe
 
 ## Stretch Goals
 - Search local storage for recipes based on first few letters of the recipe
@@ -29,7 +27,7 @@ The vision for Recipe Reservoir is to have an easy space to input and access rec
 
 # Functional Requirements
 
-- Users will have the ability to input recipes with ingredients, quantities, directions, and images
+- Users will have the ability to input recipes with ingredients, quantities, and directions
 - Users can delete recipes 
 - Users can search for recipes based on title or ingredient
 - Users can rank their recipes
