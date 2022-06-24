@@ -1,4 +1,6 @@
 "use strict";
 // Render all recipes from storage
 
-// Add delete buttons to recipes
+// Add delete button to each ingredient
+
+// Add delete button to each recipe
