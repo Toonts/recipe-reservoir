@@ -15,10 +15,15 @@ function showTitle() {
     titleFormal.textContent = 'Title: ';
     let innerUL = document.createElement('ul');
     let title = document.createElement('li');
+    let deleteTitle = document.createElement ('li');
     title.textContent = allRecipes[i].title;
     innerUL.appendChild(title);
+    deleteTitle.innerText = 'X'; 
+    deleteTitle.id = i; 
     newEntry.appendChild(titleFormal);
     newEntry.appendChild(innerUL);
+    recipeDiv.appendChild(deleteTitle);
+    
     //   for (let j = 0; j < allRecipes[i].ingredients.length; j++) {
     //     let ingredient = ingredients[i];
     //     let ingredientType = document.createElement("td");
@@ -44,10 +49,14 @@ function showIngredients() {
     titleFormal.textContent = 'Ingredients: ';
     let innerUL = document.createElement('ul');
     let ingredients = document.createElement('li');
+    let deleteIngredients = document.createElement ('li');
     ingredients.textContent = allRecipes[i].ingredients;
     innerUL.appendChild(ingredients);
+    deleteIngredients.innerText = 'X'; 
+    deleteIngredients.id = i; 
     newIngredients.appendChild(titleFormal);
     newIngredients.appendChild(innerUL);
+    recipeDiv.appendChild(deleteIngredients); 
 
     recipeDiv.appendChild(newIngredients);
   }
@@ -61,10 +70,14 @@ function showInstructions() {
     titleFormal.textContent = 'Instructions: ';
     let innerUL = document.createElement('ul');
     let instructions = document.createElement('li');
+    let deleteLink = document.createElement ('li'); 
     instructions.textContent = allRecipes[i].instructions;
     innerUL.appendChild(instructions);
+    deleteLink.innerText = 'X'; 
+    deleteLink.id = i; 
     newInstructions.appendChild(titleFormal);
     newInstructions.appendChild(innerUL);
+    recipeDiv.appendChild(deleteLink); 
 
     recipeDiv.appendChild(newInstructions);
   }
