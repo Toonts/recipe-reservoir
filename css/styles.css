@@ -42,12 +42,12 @@ a{
 a:hover{
   background-color: rgb(119, 157, 199);
 }
-main {
-  height: 700px;
-}
+/* main {
+  height: auto;
+} */
 footer {
   text-align: center;
-  height: 300px;
+
 }
 
 /*index.html*/
@@ -75,26 +75,63 @@ h2{
   text-align: center;
   font-family: 'Franklin Gothic Medium', sans-serif;
   font-size: 2rem;
-  padding: 2rem;
+  padding: 0 2rem;
 }
-#conversion1{
-  background-color: whitesmoke;
-  width: 80%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(7,1fr);
-}
+
 .list-head{
   font-weight: bold;
   padding: 1rem;
 }
-#conversion1 #tsp li{
+
+#conv1{
+  background-color: whitesmoke;
+  width: 80%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  
+}
+#conv2{
+  background-color: whitesmoke;
+  width: 80%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  
+}
+#conv3{
+  background-color: whitesmoke;
+  width: 20%;
+  margin: 2rem auto 4rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  
+}
+
+.conv-p{
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: medium;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+}
+.conversion #tsp li{
   border-left: none;
 }
-#conversion1 #gallon li{
+
+.conversion #gallon li{
   border-right: none;
 }
-#conversion1 li{
+.conversion #tsp-ml1 li{
+  border-left: none;
+}
+.conversion #oz-g1 li{
+  border-left: none;
+}
+
+.conversion li{
   padding-left: 1rem;
   padding-bottom: 1rem;
   border-left: .5px solid black;
@@ -104,8 +141,12 @@ h2{
   padding: .5rem;
   font-family:'Franklin Gothic Medium', sans-serif;
 }
-#conversion1 li:hover{
+
+.conversion li:hover{
   background-color: rgba(254, 254, 0, 0.598);
+}
+#tsp-ml1, #tsp-ml2, #oz-ml1, #oz-ml2{
+  background-color: rgba(159, 159, 219, 0.574);
 }
 
 
