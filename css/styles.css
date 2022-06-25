@@ -8,9 +8,10 @@ html {
 h1 {
   font-family: "titan one", cursive;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  color: rgb(6, 6, 83)
 }
 .banner{
   width: 100%;
@@ -51,6 +52,21 @@ footer {
 
 /*index.html*/
 
+#search-box{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: rgba(249, 238, 116, 0.783);
+  padding: 30px;
+  margin: auto;
+  height: 15%;
+  justify-content: space-between;
+}
+
+.search:hover{
+  background-color: beige;
+}
+
 /*all-recipes.html*/
 
 /*conversion.html*/
@@ -79,10 +95,7 @@ img{
   display: flex;
   justify-content: flex-start;
 }
-#ingredients, #instructions{
-  height: 300px;
-  width: 300px; 
-}
+
 
 
 
