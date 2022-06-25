@@ -6,12 +6,15 @@
 // Pull info from form into constructor function and save (put form in index.html)
 
 //add event listeners
+let recipe = new RecipeList([]);
+
 const input1 = document.getElementById('name');
 const input2 = document.getElementById('ingredients');
 const input3 = document.getElementById('rating');
-const input4 = document.getElementById('title');
-const input5 = document.getElementById('new-ingredients');
-const input6 = document.getElementById('instructions');
+const form = document.getElementById('newrecipes');
+form.addEventListener('submit', formSubmit)
+
+//Search Event Listeners
 input1.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
@@ -33,27 +36,31 @@ input3.addEventListener("keypress", function(event) {
     console.log(nameValue);
   }
 });
-input4.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
+
+// New Recipe Listeners
+
+  function formSubmit(event) {
     event.preventDefault();
-    let nameValue = document.getElementById('title').value;
-    console.log(nameValue);
-  }
-});
-input5.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    let nameValue = document.getElementById('new-ingredients').value;
-    console.log(nameValue);
-  }
-});
-input6.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    let nameValue = document.getElementById('instructions').value;
-    console.log(nameValue);
-  }
-});
+    let id = event.target;
+    let recipeTitle = id.title.value;
+    let recipeIngredients = id.ingredients.value;
+    let recipeInstructions = id.instructions.value;
+  
+    let newRecipe = new RecipeList(
+      recipeTitle,
+      recipeIngredients,
+      recipeInstructions,
+    );
+    allRecipes.push(newRecipe);
+    console.log(allRecipes)
+}
+
+function addSelectedItemToCart() {
+  // TODO: suss out the item picked from the select list
+  let item = document.getElementById('items').value;
+  let quantity = document.getElementById('quantity').value;
+  cart.addItem(item, quantity);
+}
 
 
 function render (){
