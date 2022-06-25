@@ -21,14 +21,13 @@ let recipe2 = new Recipe("cookie", "salmon", "pat");
 
 //save
 Recipe.prototype.saveAllToLocalStorage = function () {
-  localStorage.setItem('recipeBook', JSON.stringify(allRecipes));
+  localStorage.setItem('recipebook', JSON.stringify(allRecipes));
 };
 
 //load
 Recipe.prototype.loadFromLocalStorage = function () {
   let loadRecipe = JSON.parse(localStorage.getItem("recipebook")) || [];
-   let recipe = new Recipe(loadRecipe);
-  allRecipes.push(recipe); 
+   allRecipes = loadRecipe;
 };
 
 //new recipe
@@ -37,7 +36,7 @@ Recipe.prototype.loadFromLocalStorage = function () {
 
 //console.log(allRecipes);
 
-allRecipes[0].saveAllToLocalStorage();
+// allRecipes[0].saveAllToLocalStorage();
 // for (let i = 0; i < 5; i++){
 //   let recipe = allRecipes[i]; 
 //   recipe.loadFromLocalStorage(); 
