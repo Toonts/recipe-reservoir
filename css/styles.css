@@ -57,14 +57,17 @@ footer {
   flex-direction: column;
   width: 20%;
   background-color: rgba(249, 238, 116, 0.783);
-  padding: 30px;
+  padding: 10px;
   margin: auto;
   height: 15%;
   justify-content: space-between;
 }
 
-.search:hover{
+.box:hover{
   background-color: beige;
+}
+.box{
+  margin: .5rem;
 }
 
 /*all-recipes.html*/
