@@ -44,6 +44,7 @@ Recipe.prototype.loadFromLocalStorage = function () {
 
 
 //console.log(allRecipes);
+
 allRecipes[0].saveAllToLocalStorage();
 // for (let i = 0; i < 5; i++){
 //   let recipe = allRecipes[i]; 
@@ -51,5 +52,8 @@ allRecipes[0].saveAllToLocalStorage();
 //   console.log(recipe); 
 // }
 
-
+Recipe.prototype.removeItem = function (){
+  let index = this.allRecipes.indexOf(recipe); 
+  this.allRecipes.splice (index, 1); 
+}
 
