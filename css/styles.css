@@ -8,9 +8,10 @@ html {
 h1 {
   font-family: "titan one", cursive;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  color: rgb(6, 6, 83)
 }
 .banner{
   width: 100%;
@@ -51,9 +52,63 @@ footer {
 
 /*index.html*/
 
+#search-box{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: rgba(249, 238, 116, 0.783);
+  padding: 30px;
+  margin: auto;
+  height: 15%;
+  justify-content: space-between;
+}
+
+.search:hover{
+  background-color: beige;
+}
+
 /*all-recipes.html*/
 
 /*conversion.html*/
+
+h2{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  font-size: 2rem;
+  padding: 2rem;
+}
+#conversion1{
+  background-color: whitesmoke;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+}
+.list-head{
+  font-weight: bold;
+  padding: 1rem;
+}
+#conversion1 #tsp li{
+  border-left: none;
+}
+#conversion1 #gallon li{
+  border-right: none;
+}
+#conversion1 li{
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  border-left: .5px solid black;
+  border-top: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: .5rem;
+  font-family:'Franklin Gothic Medium', sans-serif;
+}
+#conversion1 li:hover{
+  background-color: rgba(254, 254, 0, 0.598);
+}
+
+
 
 /*about-us.html*/
 
@@ -79,13 +134,16 @@ img{
   display: flex;
   justify-content: flex-start;
 }
-#ingredients, #instructions{
-  height: 300px;
-  width: 300px; 
+
+
+
+div {
+  display: flex;
+  justify-content: space-around;
+  column-count: 3;
+  width:100%;
+  column-width: 250px;
 }
-
-
-
 
 
 
