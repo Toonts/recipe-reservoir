@@ -45,11 +45,10 @@ a:hover{
 /* main {
   height: auto;
 } */
-/* footer {
+footer {
   text-align: center;
-  position:fixed;
-  bottom: 0;
-} */
+
+}
 
 /*index.html*/
 
@@ -100,6 +99,14 @@ h2{
   grid-template-columns: repeat(8,1fr);
   
 }
+#conv3{
+  background-color: whitesmoke;
+  width: 20%;
+  margin: 2rem auto 4rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  
+}
 
 .conv-p{
   display: block;
@@ -108,7 +115,7 @@ h2{
   font-size: medium;
   font-family: 'Franklin Gothic Medium', sans-serif;
   padding-top: .5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .conversion #tsp li{
   border-left: none;
@@ -118,6 +125,9 @@ h2{
   border-right: none;
 }
 .conversion #tsp-ml1 li{
+  border-left: none;
+}
+.conversion #oz-g1 li{
   border-left: none;
 }
 
