@@ -71,6 +71,19 @@ footer {
 
 /*conversion.html*/
 
+#conversion{
+  background-color: whitesmoke;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+#imperial{
+  display: flex;
+  flex-direction: column;
+}
+
 /*about-us.html*/
 
 #summary{
