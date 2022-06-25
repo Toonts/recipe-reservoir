@@ -7,8 +7,8 @@
 //   // table.addEventListener('click', removeIngredients);
 // };
 
-function showIngredients() {
-  let recipeDiv = document.getElementById("recipeData"); // Trying to find table body
+function showTitle() {
+  let recipeDiv = document.getElementById("recipeTitle"); // Trying to find table body
   for (let i = 0; i < allRecipes.length; i++) {
     let newEntry = document.createElement("ul"); 
     let titleFormal = document.createElement("li"); 
@@ -36,9 +36,28 @@ function showIngredients() {
   }
 }
 
+function showIngredients() {
+  let recipeDiv = document.getElementById("recipeIngredients"); 
+  for (let i = 0; i < allRecipes.length; i++) {
+    let newIngredients = document.createElement("ul"); 
+    let titleFormal = document.createElement("li"); 
+    titleFormal.textContent = "Ingredients: "; 
+    let innerUL = document.createElement("ul"); 
+    let ingredients = document.createElement("li"); 
+    ingredients.textContent = allRecipes[i].ingredients; 
+    innerUL.appendChild(ingredients); 
+    newIngredients.appendChild(titleFormal); 
+    newIngredients.appendChild(innerUL); 
+  
+    recipeDiv.appendChild(newIngredients); 
+  }
+}
+
+
 function renderIngredients() {
   loadFromLocalStorage();
-  showIngredients();
+  showTitle();
+  showIngredients(); 
 }
 
 function loadFromLocalStorage() {
