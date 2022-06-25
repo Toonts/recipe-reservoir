@@ -8,46 +8,20 @@ let ingredientsArray = [];
 let instructionsArray = [];
 
 //tbd if there should be separate arrays for parameters
-const Recipe = function(items) {
-  this.items = items;
-  allRecipes.push(this);
-}
 
-const RecipeList = function(title, ingredients, instructions) {
+const Recipe = function(title, ingredients, instructions) {
   this.title = title;
   this.ingredients = ingredients;
   this.instructions = instructions;
-  titleArray.push(this.title);
-  ingredientsArray.push(this.ingredients);
-  instructionsArray.push(this.instructions)
+  allRecipes.push(this);
 };
 
-RecipeList.prototype.addItem = function(title, ingredients, instructions) {
-  let newRecipe = new RecipeList(title, ingredients, instructions);
-  this.items.push(newRecipe);
-};
+let recipe1 = new Recipe("cake", "rake", "bake");
+let recipe2 = new Recipe("cookie", "salmon", "pat");
 
-Recipe.prototype.saveTitle = function () {
-  let stringify1 = JSON.stringify (this.title);
-  localStorage.setItem("recipetitle", stringify1); 
-}
-Recipe.prototype.saveIngredients = function () {
-  let stringify2 = JSON.stringify (this.ingredients);
-  localStorage.setItem("recipeingredients", stringify2); 
-}
-Recipe.prototype.saveInstrunctions = function () {
-  let stringify3 = JSON.stringify (this.instructions); 
-  localStorage.setItem("recipeinstructions", stringify3); 
-}
-
-let recipe1 = new RecipeList("cake", "rake", "bake");
-let recipe2 = new RecipeList("cookie", "salmon", "pat");
-console.log(titleArray);
-console.log(ingredientsArray);
 //save
 Recipe.prototype.saveAllToLocalStorage = function () {
-  let stringify = JSON.stringify(this.list);
-  localStorage.setItem("recipebook", stringify);
+  localStorage.setItem('recipeBook', JSON.stringify(allRecipes));
 };
 
 //load

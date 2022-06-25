@@ -5,8 +5,7 @@
 
 // Pull info from form into constructor function and save (put form in index.html)
 
-//add event listeners
-let recipe = new RecipeList([]);
+//Adding event listeners
 
 const input1 = document.getElementById('name');
 const input2 = document.getElementById('ingredients');
@@ -37,7 +36,7 @@ input3.addEventListener("keypress", function(event) {
   }
 });
 
-// New Recipe Listeners
+//Adding new recipes
 
   function formSubmit(event) {
     event.preventDefault();
@@ -46,26 +45,19 @@ input3.addEventListener("keypress", function(event) {
     let recipeIngredients = id.ingredients.value;
     let recipeInstructions = id.instructions.value;
   
-    let newRecipe = new RecipeList(
+    let newRecipe = new Recipe(
       recipeTitle,
       recipeIngredients,
       recipeInstructions,
     );
-    allRecipes.push(newRecipe);
+    newRecipe.saveAllToLocalStorage();
+    console.log(newRecipe)
     console.log(allRecipes)
 }
 
-function addSelectedItemToCart() {
-  // TODO: suss out the item picked from the select list
-  let item = document.getElementById('items').value;
-  let quantity = document.getElementById('quantity').value;
-  cart.addItem(item, quantity);
-}
-
-
 function render (){
   let table = document.getElementById ("table");
-  for (let i=0; i < allRecipes.length; i++){
+  for (let i = 0; i < allRecipes.length; i++){
     let recipe = allRecipes[i];
     let tableRow = document.createElement ("tr");
     let tableData = document.createElement ("td");
