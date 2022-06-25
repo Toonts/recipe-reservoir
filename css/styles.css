@@ -142,6 +142,7 @@ div {
   justify-content: space-around;
   column-count: 3;
   width:100%;
+  column-width: 250px;
 }
 
 
