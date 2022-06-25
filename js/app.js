@@ -44,6 +44,7 @@ Recipe.prototype.loadFromLocalStorage = function () {
 
 
 //console.log(allRecipes);
+
 allRecipes[0].saveAllToLocalStorage();
 // for (let i = 0; i < 5; i++){
 //   let recipe = allRecipes[i]; 
