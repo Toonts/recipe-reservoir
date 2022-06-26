@@ -1,42 +1,38 @@
 'use strict';
+// Event listener to remove recipes from recipeBook
+for (let i = 0; i < allRecipes.length; i++){
+  let recipe = allRecipes[i];
+  let x = document.getElementById(`${i}`);
+  x.addEventListener('click', removeRecipe);
+}
+
 // Render all recipes from storage
 
-// Add delete buttons to recipes
-// Recipe.prototype.render = function (i) {
-//   const table = document.getElementById("recipeData");
-//   // table.addEventListener('click', removeIngredients);
-// };
+//load
+function loadFromLocalStorage () {
+  let recipes = JSON.parse(localStorage.getItem("recipebook")) || [];
+   allRecipes = loadRecipe;
+};
 
 function showTitle() {
-  let recipeDiv = document.getElementById('recipeTitle'); // Trying to find table body
+  let recipeDiv = document.getElementById('recipeTitle'); 
   for (let i = 0; i < allRecipes.length; i++) {
     let newEntry = document.createElement('ul');
-    let titleFormal = document.createElement('li');
-    titleFormal.textContent = 'Title: ';
     let innerUL = document.createElement('ul');
+
+    let titleFormal = document.createElement('li');
     let title = document.createElement('li');
     let deleteTitle = document.createElement ('li');
-    title.textContent = allRecipes[i].title;
-    innerUL.appendChild(title);
+
     deleteTitle.innerText = 'X'; 
     deleteTitle.id = i; 
+    titleFormal.textContent = 'Title: ';
+    title.textContent = allRecipes[i].title;
+
     newEntry.appendChild(titleFormal);
     newEntry.appendChild(innerUL);
+    innerUL.appendChild(title);
     recipeDiv.appendChild(deleteTitle);
-    
-    //   for (let j = 0; j < allRecipes[i].ingredients.length; j++) {
-    //     let ingredient = ingredients[i];
-    //     let ingredientType = document.createElement("td");
-    //     let ingredientDelete = document.createElement("td");
-
-    //     ingredientType.innerText = this.ingredients[i];
-    //     ingredientDelete.innerText = "X";
-    //     ingredientDelete.id = i;
-
-    //     tableRow.appendChild(ingredientType);
-    //     tableRow.appendChild(ingredientDelete); //list name, then the ingredient, then insructions, then if you make a new Ul and nest it over
-    //     tableBody.appendChild(tableRow);
-    // }
     recipeDiv.appendChild(newEntry);
   }
 }
@@ -49,15 +45,10 @@ function showIngredients() {
     titleFormal.textContent = 'Ingredients: ';
     let innerUL = document.createElement('ul');
     let ingredients = document.createElement('li');
-    let deleteIngredients = document.createElement ('li');
     ingredients.textContent = allRecipes[i].ingredients;
     innerUL.appendChild(ingredients);
-    deleteIngredients.innerText = 'X'; 
-    deleteIngredients.id = i; 
     newIngredients.appendChild(titleFormal);
     newIngredients.appendChild(innerUL);
-    recipeDiv.appendChild(deleteIngredients); 
-
     recipeDiv.appendChild(newIngredients);
   }
 }
@@ -70,15 +61,10 @@ function showInstructions() {
     titleFormal.textContent = 'Instructions: ';
     let innerUL = document.createElement('ul');
     let instructions = document.createElement('li');
-    let deleteLink = document.createElement ('li'); 
     instructions.textContent = allRecipes[i].instructions;
     innerUL.appendChild(instructions);
-    deleteLink.innerText = 'X'; 
-    deleteLink.id = i; 
     newInstructions.appendChild(titleFormal);
     newInstructions.appendChild(innerUL);
-    recipeDiv.appendChild(deleteLink); 
-
     recipeDiv.appendChild(newInstructions);
   }
 }
@@ -90,11 +76,17 @@ function renderIngredients() {
   showInstructions();
 }
 
-function loadFromLocalStorage() {
-  let loadRecipe = JSON.parse(localStorage.getItem('recipebook')) || [];
-  allRecipes = loadRecipe;
+// Add delete buttons to recipes
+
+function removeRecipe(event){
+  event.preventDefault();
+  recipeBook.removeRecipe(event.target.id);
+  saveAllToLocalStorage(recipeBook);
+  renderIngredients();
 }
 
 renderIngredients();
-//console.log(recipe1);
-// let recipe3 = new Recipe ('cake', 'rake', 'bake');
+
+
+
+

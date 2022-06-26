@@ -1,9 +1,7 @@
 "use strict";
-// Call save & load when recipes are searched for
+//Global
 
-// Render list of searched recipes
-
-// Pull info from form into constructor function and save (put form in index.html)
+let recipeBook = new RecipeBook([]);
 
 //Adding event listeners
 
@@ -50,7 +48,8 @@ input3.addEventListener("keypress", function(event) {
       recipeIngredients,
       recipeInstructions,
     );
-    newRecipe.saveAllToLocalStorage();
+    
+    saveAllToLocalStorage(newRecipe);
 }
 
 function render (){
@@ -64,4 +63,6 @@ function render (){
     table.appendChild(tableRow);
   }
 }
+
+
 

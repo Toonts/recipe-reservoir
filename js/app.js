@@ -1,13 +1,27 @@
 "use strict";
-// Create Recipe Constructor function
+// recipe book constructor
 
-// Save to and load from Local Storage
-let allRecipes = [];
-let titleArray = [];
-let ingredientsArray = [];
-let instructionsArray = [];
+const RecipeBook = function(recipes){
+  this.recipes = recipes;
+}
+// create new recipe and add to this.recipes
+RecipeBook.prototype.addRecipe = function(title, ingredients, instructions){
+  let newRecipe = new Recipe (title, ingredients, instructions);
+  this.recipes.push(newRecipe);
+};
 
-//tbd if there should be separate arrays for parameters
+// Save to Local Storage
+
+function saveAllToLocalStorage () {
+  localStorage.setItem('recipebook', JSON.stringify(allRecipes));
+};
+
+//remove recipe
+RecipeBook.prototype.removeRecipe = function(recipe){
+  this.recipes.splice(recipe, 1);
+};
+
+//ProductConstructor  =========================================================
 
 const Recipe = function(title, ingredients, instructions) {
   this.title = title;
@@ -16,30 +30,10 @@ const Recipe = function(title, ingredients, instructions) {
   allRecipes.push(this);
 };
 
-let recipe1 = new Recipe("cake", "rake", "bake");
-let recipe2 = new Recipe("cookie", "salmon", "pat");
+//==========================+++++++++++++++++++++==============================
 
-//save
-Recipe.prototype.saveAllToLocalStorage = function () {
-  localStorage.setItem('recipebook', JSON.stringify(allRecipes));
-};
-
-//load
-Recipe.prototype.loadFromLocalStorage = function () {
-  let loadRecipe = JSON.parse(localStorage.getItem("recipebook")) || [];
-   allRecipes = loadRecipe;
-};
-
-//new recipe
+let allRecipes = [];
 
 
 
-//console.log(allRecipes);
-
-// allRecipes[0].saveAllToLocalStorage();
-// for (let i = 0; i < 5; i++){
-//   let recipe = allRecipes[i]; 
-//   recipe.loadFromLocalStorage(); 
-//   console.log(recipe); 
-// }
 
