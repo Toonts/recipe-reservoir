@@ -72,6 +72,39 @@ footer {
 
 /*all-recipes.html*/
 
+.row {
+  border: solid;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+#recipeIngredients {
+  overflow: scroll;
+}
+
+#recipeInstructions {
+  overflow: scroll;
+}
+
+li {
+  list-style: none;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+
+ul {
+  padding-bottom: 20px;
+  text-align: justify;
+}
+
 /*conversion.html*/
 
 h2{
@@ -152,8 +185,6 @@ h2{
   background-color: rgba(159, 159, 219, 0.574);
 }
 
-
-
 /*about-us.html*/
 
 #summary{
@@ -179,8 +210,6 @@ img{
   justify-content: flex-start;
 }
 
-
-
 div {
   display: flex;
   justify-content: space-around;
@@ -188,6 +217,3 @@ div {
   width:100%;
   column-width: 250px;
 }
-
-
-
