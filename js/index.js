@@ -50,6 +50,7 @@ input3.addEventListener("keypress", function(event) {
       recipeIngredients,
       recipeInstructions,
     );
+    
     newRecipe.saveAllToLocalStorage();
 }
 

@@ -30,12 +30,17 @@
 
     </header>
     <main>
-      <!-- <table id="recipeData"></table> -->
-    <div class = "row">
-      <div class = "column" id="recipeTitle"></div>
-      <div class = "column" id="recipeIngredients"></div>
-      <div class = "column" id="recipeInstructions"></div>
-    </div>
+      <table>
+        <thead>
+          <tr id="headerRow">
+            <th>remove</th>
+            <th>Recipe Name</th>
+            <th>Ingredients</th>
+            <th>Instructions</th>
+          </tr>
+        <tbody id="recipeData"></tbody>
+      </thead>
+      </table>
     </main>
     <footer><p>&copy;Copyright Code Fellows</p></footer>
     <script src="js/app.js"></script>
