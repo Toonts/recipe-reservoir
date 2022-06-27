@@ -25,6 +25,10 @@ function loadFromLocalStorage() {
   allRecipes = loadRecipe;
 }
 
+//Remove one recipe from allRecipes
+
+
+
 loadFromLocalStorage();
 
 

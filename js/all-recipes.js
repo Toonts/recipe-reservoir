@@ -40,6 +40,10 @@ function removeRecipe(event){
   for(let element of deleteRecipe){
     element.innerHTML = null;
   }
-  }
+  loadFromLocalStorage();
+  console.log(allRecipes);
+  allRecipes.splice(event.target.className, 1);
+  Recipe.prototype.saveAllToLocalStorage();
+}
 
 renderRecipe();
