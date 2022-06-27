@@ -16,18 +16,30 @@ function renderRecipe() {
     let instructions = document.createElement('td');
 
     remove.innerText = 'x';
+    remove.className = i;
     title.innerText = recipe.title;
+    title.className = i;
     ingredients.innerText = recipe.ingredients;
+    ingredients.className = i;
     instructions.innerText = recipe.instructions;
+    instructions.className = i;
 
     newRecipe.appendChild(remove);
     newRecipe.appendChild(title);
     newRecipe.appendChild(ingredients);
     newRecipe.appendChild(instructions);
     bodyContainer.appendChild(newRecipe);
-
-    //remove.addEventListener('click', removeRecipe);
+    //Event listener
+    remove.addEventListener('click', removeRecipe);
   }
 }
+
+function removeRecipe(event){
+  event.preventDefault();
+  let deleteRecipe = document.getElementsByClassName(event.target.className);
+  for(let element of deleteRecipe){
+    element.innerHTML = null;
+  }
+  }
 
 renderRecipe();
