@@ -50,23 +50,22 @@ function removeRecipe(event){
 
 renderRecipe();
 
-  showTitle();
-  showIngredients();
-  showInstructions();
-}
+  
+
+
 
 function loadFromLocalStorage() {
   let loadRecipe = JSON.parse(localStorage.getItem("recipebook")) || [];
   allRecipes = loadRecipe;
 }
 
-renderIngredients();
+
 
  function removeIngredientsFromPage(event) {
    event.preventDefault();
 allRecipes.removeIngredients(event.target.id);
   allRecipes.saveAllToLocalStorage();
-   renderIngredients();
+   
  }
 
  function removeIngredients() {
