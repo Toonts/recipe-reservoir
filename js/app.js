@@ -3,10 +3,6 @@
 
 // Save to and load from Local Storage
 let allRecipes = [];
-let titleArray = [];
-let ingredientsArray = [];
-let instructionsArray = [];
-
 //tbd if there should be separate arrays for parameters
 
 const Recipe = function(title, ingredients, instructions) {
@@ -25,11 +21,12 @@ Recipe.prototype.saveAllToLocalStorage = function () {
 };
 
 //load
-Recipe.prototype.loadFromLocalStorage = function () {
+function loadFromLocalStorage () {
   let loadRecipe = JSON.parse(localStorage.getItem("recipebook")) || [];
    allRecipes = loadRecipe;
 };
 
+loadFromLocalStorage();
 //new recipe
 
 
