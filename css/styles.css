@@ -50,7 +50,7 @@ footer {
 
 /*index.html*/
 
-#search-box, #newrecipes {
+#search-box {
   display: flex;
   flex-direction: column;
   width: 20%;
