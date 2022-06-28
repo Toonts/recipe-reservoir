@@ -17,7 +17,7 @@ The vision for Recipe Reservoir is to have an easy space to input and access rec
 ## Minimum Viable Product
 - Take in user input to store recipes in local storage
 - Remove recipes from local storage
-- Search storage for saved recipes using title or ingredient
+- Search storage for saved recipes using recipe title
 - Ability to add rating to recipe
 
 ## Stretch Goals
@@ -27,12 +27,10 @@ The vision for Recipe Reservoir is to have an easy space to input and access rec
 
 # Functional Requirements
 
-- Users will have the ability to input recipes with ingredients, quantities, and directions
+- Users will have the ability to input recipes with titles, ingredient, and instructions
 - Users can delete recipes 
-- Users can search for recipes based on title or ingredient
+- Users can search for recipes based on title
 - Users can rank their recipes
-
-## Data Flow
 
 
 
