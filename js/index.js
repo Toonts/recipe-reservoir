@@ -84,13 +84,5 @@ function searchIngredient(event) {
 
     }
 
-  let newRecipe = new Recipe(
-    recipeTitle,
-    recipeIngredients,
-    recipeInstructions
-  );
-  newRecipe.saveAllToLocalStorage();
-}
-
 
 form.addEventListener("submit", formSubmit);
