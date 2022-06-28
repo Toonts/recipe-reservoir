@@ -58,9 +58,8 @@ function rateRecipe(event){
     }
   for(let i = 0; i < allRecipes.length; i++){
     let ratingContainer = document.getElementById(i);
-  
-    if (ratingContainer = event.target){
-      ratingContainer.innerHtml = userRating;
+    if (ratingContainer.id == event.target.id){
+      event.target.innerText = userRating;
     }
   }
 }
