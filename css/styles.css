@@ -200,17 +200,25 @@ img{
   justify-content: flex-start;
 }
 
-.recipe-column:hover {
+/* .recipe-column:hover {
     background-color: rgba(254, 254, 0, 0.598);
-  }
+  } */
   #recipeData tr:hover {
     background-color: rgba(254, 254, 0, 0.598);
   }
 
   #recipeData th:hover {
     background-color: rgb(119, 157, 199); 
-    color:rgba(254, 254, 0, 0.598); 
+    color:yellow; 
     font-weight: bold;
+  }
+
+  #allrecipes{
+    width:auto;
+    margin-left: 25px;
+    margin-right:25px;
+    
+
   }
 
 /* div {
