@@ -42,9 +42,7 @@ a{
 a:hover{
   background-color: rgb(119, 157, 199);
 }
-/* main {
-  height: auto;
-} */
+
 footer {
   text-align: center;
 
@@ -72,37 +70,29 @@ footer {
 
 /*all-recipes.html*/
 
-.row {
+tr {
   border: solid;
   width: 90%;
   margin: 2rem auto;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 30px;
-  margin-left: 100px;
+table {
+  text-align: center;
+  margin:auto;
 }
 
-#recipeIngredients {
+th {
+  padding: 1rem;
+  border-right: solid;
+}
+td {
+  padding: 1rem;
   overflow: scroll;
+  border-right: solid;
 }
 
-#recipeInstructions {
-  overflow: scroll;
-}
-
-li {
-  list-style: none;
-  padding-bottom: 20px;
-  text-align: justify;
-}
-
-ul {
-  padding-bottom: 20px;
-  text-align: justify;
+#remove{
+  font-size: smaller;
 }
 
 /*conversion.html*/
