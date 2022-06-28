@@ -1,3 +1,4 @@
+
 'use strict';
 
 //Render saved recipes
@@ -41,9 +42,36 @@ function removeRecipe(event){
     element.innerHTML = null;
   }
   loadFromLocalStorage();
+
   console.log(allRecipes);
   allRecipes.splice(event.target.className, 1);
   Recipe.prototype.saveAllToLocalStorage();
 }
 
 renderRecipe();
+
+  showTitle();
+  showIngredients();
+  showInstructions();
+}
+
+function loadFromLocalStorage() {
+  let loadRecipe = JSON.parse(localStorage.getItem("recipebook")) || [];
+  allRecipes = loadRecipe;
+}
+
+renderIngredients();
+
+ function removeIngredientsFromPage(event) {
+   event.preventDefault();
+allRecipes.removeIngredients(event.target.id);
+  allRecipes.saveAllToLocalStorage();
+   renderIngredients();
+ }
+
+ function removeIngredients() {
+let index = allRecipes.indexOf(recipe);
+allRecipes.splice(index, 1);
+}
+
+
