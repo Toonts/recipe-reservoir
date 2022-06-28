@@ -60,12 +60,29 @@ function searchIngredient(event) {
 }
 //Adding new recipes
 
-function formSubmit(event) {
-  event.preventDefault();
-  let id = event.target;
-  let recipeTitle = id.title.value;
-  let recipeIngredients = id.ingredients.value;
-  let recipeInstructions = id.instructions.value;
+
+  function formSubmit(event) {
+    event.preventDefault();
+      let id = event.target;
+      let recipeTitle = id.title.value;
+      let recipeIngredients = id.ingredients.value;
+      let recipeInstructions = id.instructions.value;
+  
+      let newRecipe = new Recipe(
+        recipeTitle,
+        recipeIngredients,
+        recipeInstructions,
+      );
+      
+    newRecipe.saveAllToLocalStorage();
+
+      let inputs = document.querySelectorAll('#title, #new-ingredients, #instructions')
+
+      inputs.forEach(input => {
+        input.value = '';
+      });
+
+    }
 
   let newRecipe = new Recipe(
     recipeTitle,
