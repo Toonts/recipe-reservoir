@@ -1,88 +1,55 @@
-"use strict";
-// Render all recipes from storage
 
-// Add delete buttons to recipes
-// const list = document.getElementById("recipeIngredients");
-// list.addEventListener("click", removeIngredientsFromPage);
+'use strict';
 
-function showTitle() {
-  let recipeDiv = document.getElementById("recipeTitle"); // Trying to find table body
-  for (let i = 0; i < allRecipes.length; i++) {
-    let newEntry = document.createElement("ul");
-    let titleFormal = document.createElement("li");
-    titleFormal.textContent = "Title: ";
-    let innerUL = document.createElement("ul");
-    let title = document.createElement("li");
-    let deleteTitle = document.createElement("li");
-    title.textContent = allRecipes[i].title;
-    innerUL.appendChild(title);
-    deleteTitle.innerText = "X";
-    deleteTitle.id = i;
-    newEntry.appendChild(titleFormal);
-    newEntry.appendChild(innerUL);
-    recipeDiv.appendChild(deleteTitle);
+//Render saved recipes
 
-    //   for (let j = 0; j < allRecipes[i].ingredients.length; j++) {
-    //     let ingredient = ingredients[i];
-    //     let ingredientType = document.createElement("td");
-    //     let ingredientDelete = document.createElement("td");
-
-    //     ingredientType.innerText = this.ingredients[i];
-    //     ingredientDelete.innerText = "X";
-    //     ingredientDelete.id = i;
-
-    //     tableRow.appendChild(ingredientType);
-    //     tableRow.appendChild(ingredientDelete); //list name, then the ingredient, then insructions, then if you make a new Ul and nest it over
-    //     tableBody.appendChild(tableRow);
-    // }
-    recipeDiv.appendChild(newEntry);
-  }
-}
-
-function showIngredients() {
-  let recipeDiv = document.getElementById("recipeIngredients");
-  for (let i = 0; i < allRecipes.length; i++) {
-    let newIngredients = document.createElement("ul");
-    let titleFormal = document.createElement("li");
-    titleFormal.textContent = "Ingredients: ";
-    let innerUL = document.createElement("ul");
-    let ingredients = document.createElement("li");
-    let deleteIngredients = document.createElement("li");
-    ingredients.textContent = allRecipes[i].ingredients;
-    innerUL.appendChild(ingredients);
-    deleteIngredients.innerText = "X";
-    deleteIngredients.id = i;
-    newIngredients.appendChild(titleFormal);
-    newIngredients.appendChild(innerUL);
-    recipeDiv.appendChild(deleteIngredients);
-
-    recipeDiv.appendChild(newIngredients);
-  }
-}
-
-function showInstructions() {
-  let recipeDiv = document.getElementById("recipeInstructions");
-  for (let i = 0; i < allRecipes.length; i++) {
-    let newInstructions = document.createElement("ul");
-    let titleFormal = document.createElement("li");
-    titleFormal.textContent = "Instructions: ";
-    let innerUL = document.createElement("ul");
-    let instructions = document.createElement("li");
-    let deleteLink = document.createElement("li");
-    instructions.textContent = allRecipes[i].instructions;
-    innerUL.appendChild(instructions);
-    deleteLink.innerText = "X";
-    deleteLink.id = i;
-    newInstructions.appendChild(titleFormal);
-    newInstructions.appendChild(innerUL);
-    recipeDiv.appendChild(deleteLink);
-
-    recipeDiv.appendChild(newInstructions);
-  }
-}
-
-function renderIngredients() {
+function renderRecipe() {
   loadFromLocalStorage();
+  let bodyContainer = document.getElementById('recipeData');
+
+  for (let i = 0; i < allRecipes.length; i++) {
+    let recipe = allRecipes[i];
+    let newRecipe = document.createElement('tr');
+
+    let remove = document.createElement('th');
+    let title = document.createElement('td');
+    let ingredients = document.createElement('td');
+    let instructions = document.createElement('td');
+
+    remove.innerText = 'x';
+    remove.className = i;
+    title.innerText = recipe.title;
+    title.className = i;
+    ingredients.innerText = recipe.ingredients;
+    ingredients.className = i;
+    instructions.innerText = recipe.instructions;
+    instructions.className = i;
+
+    newRecipe.appendChild(remove);
+    newRecipe.appendChild(title);
+    newRecipe.appendChild(ingredients);
+    newRecipe.appendChild(instructions);
+    bodyContainer.appendChild(newRecipe);
+    //Event listener
+    remove.addEventListener('click', removeRecipe);
+  }
+}
+
+function removeRecipe(event){
+  event.preventDefault();
+  let deleteRecipe = document.getElementsByClassName(event.target.className);
+  for(let element of deleteRecipe){
+    element.innerHTML = null;
+  }
+  loadFromLocalStorage();
+
+  console.log(allRecipes);
+  allRecipes.splice(event.target.className, 1);
+  Recipe.prototype.saveAllToLocalStorage();
+}
+
+renderRecipe();
+
   showTitle();
   showIngredients();
   showInstructions();
@@ -95,16 +62,16 @@ function loadFromLocalStorage() {
 
 renderIngredients();
 
-// function removeIngredientsFromPage(event) {
-//   event.preventDefault();
-//   allRecipes.removeIngredients(event.target.id);
-//   allRecipes.saveAllToLocalStorage();
-//   renderIngredients();
-// }
+ function removeIngredientsFromPage(event) {
+   event.preventDefault();
+allRecipes.removeIngredients(event.target.id);
+  allRecipes.saveAllToLocalStorage();
+   renderIngredients();
+ }
 
-// function removeIngredients() {
-//   let index = allRecipes.indexOf(recipe);
-//   allRecipes.splice(index, 1);
-// }
+ function removeIngredients() {
+let index = allRecipes.indexOf(recipe);
+allRecipes.splice(index, 1);
+}
 
-//
+

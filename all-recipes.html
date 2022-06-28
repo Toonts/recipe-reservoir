@@ -26,17 +26,22 @@
         <li><a href="all-recipes.html">All Recipes</a></li>
         <li><a href="conversion.html">Conversion Key</a></li>
         <li><a href="about-us.html">About Us</a></li>
-        <li><a href="https://toonts.github.io/recipe-reservoir/">FAQ</a></li>
       </ul>
 
     </header>
     <main>
-      <!-- <table id="recipeData"></table> -->
-      <div class = "row">
-      <div class = "column" id="recipeTitle"></div>
-      <div class = "column" id="recipeIngredients"></div>
-      <div class = "column" id="recipeInstructions"></div>
-    </div>
+      <table>
+        <thead>
+          <tr id="headerRow">
+            <th id="remove">click to remove recipe</th>
+            <th class="recipe-column">Recipe Name</th>
+            <th class="recipe-column">Ingredients</th>
+            <th class="recipe-column">Instructions</th>
+            <th class="recipe-column">Rating</th>
+          </tr>
+        <tbody id="recipeData"></tbody>
+      </thead>
+      </table>
     </main>
     <footer><p>&copy;Copyright Code Fellows</p></footer>
     <script src="js/app.js"></script>
