@@ -77,7 +77,7 @@ tr {
 }
 
 table {
-  text-align: center;
+  text-align: left;
   margin:auto;
 }
 
@@ -200,10 +200,40 @@ img{
   justify-content: flex-start;
 }
 
-div {
+.recipe-column:hover {
+    background-color: rgba(254, 254, 0, 0.598);
+  }
+  #recipeData tr:hover {
+    background-color: rgba(254, 254, 0, 0.598);
+  }
+
+  #recipeData th:hover {
+    background-color: rgb(119, 157, 199); 
+    color:rgba(254, 254, 0, 0.598); 
+    font-weight: bold;
+  }
+
+/* div {
   display: flex;
   justify-content: space-around;
-  column-count: 3;
+  column-count: 4;
   width:100%;
   column-width: 250px;
+} */
+
+@media screen and (max-width: 600px) {
+  .nav-header {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  li {
+    padding: 20px; 
+  }
+  #food {
+    table-layout:fixed;
+    width: 375px;
+    font-size: .7rem; 
+    overflow-wrap: break-word;
+  }
 }
