@@ -16,7 +16,7 @@ function renderRecipe() {
     let ingredients = document.createElement('td');
     let instructions = document.createElement('td');
 
-    remove.innerText = 'x';
+    remove.innerText = 'remove';
     remove.className = i;
     title.innerText = recipe.title;
     title.className = i;
