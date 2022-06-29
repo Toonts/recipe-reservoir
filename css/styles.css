@@ -44,7 +44,10 @@ a:hover {
 }
 
 footer {
+  width:100%;
   text-align: center;
+  margin-top: 100px;
+  margin-bottom: 0;
 }
 
 /*index.html*/
@@ -70,20 +73,29 @@ footer {
   height: 15%;
   justify-content: space-between;
 }
-h3 {
+#search-box h3, #recipe h3 {
+  display: block;
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 750;
+  margin: auto;
+  width: 200px;
+  padding-bottom: 10px;
 }
-.recipeinput {
+#search-box div, #recipe div{
+  text-align: center;
+  margin-bottom:10px;
+}
+.recipeinput, .box {
   margin: 0.5rem;
   align-content: center;
+  width: 200px;
 }
 
 #submitbutton {
   width: 100px;
+  margin-top:10px;
 }
-
 input {
   font-size: 1rem;
   font-family: 'PT Serif', serif;
@@ -94,9 +106,7 @@ input:hover {
 .box:hover {
   background-color: beige;
 }
-.box {
-  margin: 0.5rem;
-}
+
 #new-ingredients {
   height: 100px;
   overflow: scroll;
@@ -225,16 +235,13 @@ h2 {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.25rem;
   line-height: 1.5;
-}
-
-h3 {
   display: flex;
   flex-direction: column;
-  padding-top:18px;
-  padding-right: 5
-  0px;
+  padding-right: 45px;
   width: 20%;
+  margin: auto;
 }
+
 
 .member-description {
   display: flex;
@@ -242,18 +249,16 @@ h3 {
   text-align: justify;
   line-height: 1.5rem;
   font-size: 20px;
-  margin-left: 105px;
   width: 42%;
-  border: .5px solid;
-  border-radius: 5px;
-  padding: 15px 10px;
-  background-color: aliceblue;
+  margin: auto;
 }
 
 img {
   height: 130px;
   width: 130px;
   transition: transform .4s;
+  padding-right: 60px;
+  margin: auto;
 }
 
 img:hover {
@@ -261,12 +266,13 @@ img:hover {
 }
 
 .team-member {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  margin-left: 20%;
-  margin-right: 5%;
+  margin: 30px 20%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  border: .5px solid;
+  border-radius: 5px;
+  padding: 15px 10px;
+  background-color: aliceblue;
 }
 
 /* .recipe-column:hover {
