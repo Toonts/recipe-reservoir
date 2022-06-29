@@ -17,7 +17,7 @@ h1 {
   width: 60%;
   margin: 0px 20% 3rem 20%;
   height: 150px;
-  background-image: url('/Config/img/banner.jpg');
+  background-image: url('/config/img/banner.jpg');
   background-size:100% 150px;
   background-repeat: no-repeat;
 }
@@ -50,7 +50,7 @@ footer {
 
 /*index.html*/
 
-#search-box{
+#search-box {
   display: flex;
   flex-direction: column;
   width: 25%;
@@ -112,7 +112,7 @@ tr {
 }
 
 table {
-  text-align: center;
+  text-align: left;
   margin:auto;
 }
 
@@ -235,10 +235,53 @@ img{
   justify-content: flex-start;
 }
 
-div {
+/* .recipe-column:hover {
+    background-color: rgba(254, 254, 0, 0.598);
+  } */
+  #recipeData tr:hover {
+    background-color: rgba(254, 254, 0, 0.598);
+  }
+
+  #recipeData th:hover {
+    background-color: rgb(238, 121, 121); 
+    font-weight: bold;
+  }
+
+  #allrecipes{
+    width:auto;
+    margin-left: 25px;
+    margin-right:25px;
+  }
+  #allrecipes thead{
+    background-color: rgba(251, 251, 53, 0.6);
+    font-size: 1rem;
+    
+  }
+  #recipeData tr{
+    height:100px; 
+  }
+
+/* div {
   display: flex;
   justify-content: space-around;
-  column-count: 3;
+  column-count: 4;
   width:100%;
   column-width: 250px;
+} */
+
+@media screen and (max-width: 600px) {
+  .nav-header {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  li {
+    padding: 20px; 
+  }
+  #food {
+    table-layout:fixed;
+    width: 375px;
+    font-size: .7rem; 
+    overflow-wrap: break-word;
+  }
 }

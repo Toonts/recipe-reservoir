@@ -13,7 +13,6 @@ const input3 = document.getElementById("rating");
 const form = document.getElementById("newrecipes");
 let ingredientsValue = document.getElementById("ingredients").value;
 
-
 //Search Event Listeners
 input1.addEventListener("keypress", searchTitle);
 input2.addEventListener("keypress", searchIngredient);
@@ -29,7 +28,7 @@ function searchTitle(event) {
       if (recipe.title.toLowerCase().includes(nameValue.toLowerCase())) {
         let tableRow = document.createElement("tr");
         let tableData = document.createElement("td");
-        tableData.innerText = recipe.title + recipe.ingredients + recipe.instructions;
+        tableData.innerText = recipe.title + "\n \n" + "Ingredients: " + "\n" + recipe.ingredients + "\n \n"+ "Instructions: " + "\n" + recipe.instructions;
         tableRow.appendChild(tableData);
         table.appendChild(tableRow);
       }
@@ -60,7 +59,6 @@ function searchIngredient(event) {
 }
 //Adding new recipes
 
-
   function formSubmit(event) {
     event.preventDefault();
       let id = event.target;
@@ -83,6 +81,5 @@ function searchIngredient(event) {
       });
 
     }
-
 
 form.addEventListener("submit", formSubmit);

@@ -1,3 +1,4 @@
+
 'use strict';
 
 //Render saved recipes
@@ -16,7 +17,7 @@ function renderRecipe() {
     let instructions = document.createElement('td');
     let rating = document.createElement('th');
 
-    remove.innerText = 'x';
+    remove.innerText = 'remove';
     remove.className = i;
     title.innerText = recipe.title;
     title.className = i;
@@ -47,6 +48,7 @@ function removeRecipe(event){
     element.innerHTML = null;
   }
   loadFromLocalStorage();
+
   allRecipes.splice(event.target.className, 1);
   Recipe.prototype.saveAllToLocalStorage();
 }
@@ -66,3 +68,28 @@ function rateRecipe(event){
 }
 
 renderRecipe();
+
+  
+
+
+
+function loadFromLocalStorage() {
+  let loadRecipe = JSON.parse(localStorage.getItem("recipebook")) || [];
+  allRecipes = loadRecipe;
+}
+
+
+
+ function removeIngredientsFromPage(event) {
+   event.preventDefault();
+allRecipes.removeIngredients(event.target.id);
+  allRecipes.saveAllToLocalStorage();
+   
+ }
+
+ function removeIngredients() {
+let index = allRecipes.indexOf(recipe);
+allRecipes.splice(index, 1);
+}
+
+

@@ -28,4 +28,9 @@ function loadFromLocalStorage() {
 
 loadFromLocalStorage();
 
+Recipe.prototype.removeItem = function (){
+  let index = this.allRecipes.indexOf(recipe); 
+  this.allRecipes.splice (index, 1); 
+}
+
 
