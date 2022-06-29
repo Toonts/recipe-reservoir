@@ -7,6 +7,7 @@ const Recipe = function(title, ingredients, instructions) {
   this.title = title;
   this.ingredients = ingredients;
   this.instructions = instructions;
+  this.rating = rating;
   allRecipes.push(this);
 };
 
@@ -24,8 +25,6 @@ function loadFromLocalStorage() {
   let loadRecipe = JSON.parse(localStorage.getItem('recipebook')) || [];
   allRecipes = loadRecipe;
 }
-
-
 
 loadFromLocalStorage();
 

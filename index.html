@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
     <title>Recipe Reservoir</title>
   </head>
   <body>
@@ -24,6 +25,8 @@
     </header>
     <main>
       <section id="search-box">
+        <h3> Search Recipes
+        </h3>
       <div class="name">
         <input type="search" class="box" id="name" placeholder="Search by name"/> </div>
       <div class="ingredients">
@@ -35,22 +38,24 @@
 
       <section id = "recipe">
         <form id = "newrecipes">
-          <h3>Add a new recipe to your book!</h3>
-          <fieldset>
-          <label>Recipe Title  
-            <input id = "title" type = "text" name = "title" required="required"/>
-          </label>
-          <label>Ingredients
-            <input id= "new-ingredients" type = "text" name = "ingredients" required="required"/>
-          </label>
-          <label> Instructions </label>
-            <input id= "instructions" type="text"  name = "instructions" required="required"> </input>
-          </fieldset>
-          <div class= "newrecipe"> <input type="submit" name="submit"/> </div>
+          <h3>Add New Recipe</h3>
+            <div class >
+            <input id = "title" class="recipeinput" type = "text" name = "title" placeholder="Enter recipe title" required="required"/>
+          </div>
+            <div>
+            <input id= "new-ingredients" class="recipeinput" type = "text" placeholder="Enter Ingredients" name = "ingredients" required="required"/>
+          </div>
+          <div>
+          <input id= "instructions" class="recipeinput" type="text" placeholder="Enter recipe instructions"  name = "instructions" required="required"> 
+        </div>
+        </input>
+        <div>
+      <input type="submit" name="submit" id = "submitbutton"/>
+    </div>
         </form>
       </section>
 
-      <section>
+      <section id = "recipeform">
         <table id = "table">
           <tbody id = "tbody">
 
