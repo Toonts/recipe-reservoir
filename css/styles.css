@@ -1,10 +1,9 @@
-/*all html*/
+/*ALL HTML ============================================================================================*/
 
 html {
   background-color: beige;
   font-family: 'Lucida Sans', sans-serif;
 }
-
 h1 {
   font-family: 'titan one', cursive;
   text-align: center;
@@ -21,7 +20,6 @@ h1 {
   background-size: 100% 150px;
   background-repeat: no-repeat;
 }
-
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -42,7 +40,6 @@ a {
 a:hover {
   background-color: rgb(119, 157, 199);
 }
-
 footer {
   width:100%;
   text-align: center;
@@ -50,7 +47,7 @@ footer {
   margin-bottom: 0;
 }
 
-/*index.html*/
+/*INDEX.HTML ============================================================================================*/
 
 #search-box {
   display: flex;
@@ -62,7 +59,6 @@ footer {
   height: 15%;
   justify-content: space-between;
 }
-
 #recipe {
   display: flex;
   flex-direction: column;
@@ -72,6 +68,10 @@ footer {
   margin: 25px auto 0px auto;
   height: 15%;
   justify-content: space-between;
+}
+#recipeform{
+  width:1000px;
+  margin:auto; 
 }
 #search-box h3, #recipe h3 {
   display: block;
@@ -91,7 +91,6 @@ footer {
   align-content: center;
   width: 200px;
 }
-
 #submitbutton {
   width: 100px;
   margin-top:10px;
@@ -106,7 +105,6 @@ input:hover {
 .box:hover {
   background-color: beige;
 }
-
 #new-ingredients, #instructions {
   height: 100px;
   overflow: scroll;
@@ -114,7 +112,7 @@ input:hover {
   font-size: 16px;
 }
 
-/*all-recipes.html*/
+/*ALL-RECIPES.HTML ====================================================================================*/
 
 #allrecipes {
   text-align: left;
@@ -135,15 +133,12 @@ input:hover {
   padding: 2rem auto;
   border: 1px solid;
 }
-
-#recipe-rate{
-  display: block;
+#recipe-rate {
   text-align: center;
   font-size: 34px;
 }
 #recipeData td {
   border-spacing:0;
-  border-collapse: collapse;
   display: inline-block;
   height: 200px;
   width: 170px;
@@ -152,21 +147,21 @@ input:hover {
   line-height: 1.25rem;
   border: 1px solid;
 }
-
 #recipeData tr:hover {
   background-color: rgba(109, 207, 82, 0.155);
 }
-
-#remove {
+.recipe-row button {
   font-size: smaller;
+  text-align: center;
+  display: block;
+  margin: 50% auto;
 }
-
 button:hover {
   font-weight: bold;
   background-color: yellow;
 }
 
-/*conversion.html*/
+/*CONVERSION.HTML =======================================================================================*/
 
 h2 {
   text-align: center;
@@ -179,7 +174,6 @@ h2 {
   font-weight: bold;
   padding: 1rem;
 }
-
 #conv1 {
   background-color: whitesmoke;
   width: 80%;
@@ -201,7 +195,6 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-
 .conv-p {
   display: block;
   margin: auto;
@@ -214,7 +207,6 @@ h2 {
 .conversion #tsp li {
   border-left: none;
 }
-
 .conversion #gallon li {
   border-right: none;
 }
@@ -224,7 +216,6 @@ h2 {
 .conversion #oz-g1 li {
   border-left: none;
 }
-
 .conversion li {
   padding-left: 1rem;
   padding-bottom: 1rem;
@@ -235,7 +226,6 @@ h2 {
   padding: 0.5rem;
   font-family: 'Franklin Gothic Medium', sans-serif;
 }
-
 .conversion li:hover {
   background-color: rgba(254, 254, 0, 0.598);
 }
@@ -246,7 +236,7 @@ h2 {
   background-color: rgba(159, 159, 219, 0.574);
 }
 
-/*about-us.html*/
+/*ABOUT-US.HTML =================================================================================*/
 
 #summary {
   text-align: justify;
@@ -262,6 +252,8 @@ h2 {
 .team-member h3 {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.25rem;
+  font-weight: bold;
+  color:rgb(6, 6, 83);
   line-height: 1.5;
   display: flex;
   flex-direction: column;
@@ -269,7 +261,6 @@ h2 {
   width: 20%;
   margin: auto;
 }
-
 .member-description {
   display: flex;
   flex-direction: column;
@@ -279,7 +270,6 @@ h2 {
   width: 42%;
   margin: auto;
 }
-
 img {
   height: 130px;
   width: 130px;
@@ -287,11 +277,9 @@ img {
   padding-right: 60px;
   margin: auto;
 }
-
 img:hover {
   transform: scale(1.5);
 }
-
 .team-member {
   margin: 30px 20%;
   display: flex;
@@ -302,24 +290,7 @@ img:hover {
   background-color: aliceblue;
 }
 
-/* .recipe-column:hover {
-    background-color: rgba(254, 254, 0, 0.598);
-  } */
-
-
-
-#recipeform{
-  width:1000px;
-  margin:auto; 
-}
-
-/* div {
-  display: flex;
-  justify-content: space-around;
-  column-count: 4;
-  width:100%;
-  column-width: 250px;
-} */
+/* MEDIA QUERY ====================================================================================== */
 
 @media screen and (max-width: 600px) {
   .nav-header {
