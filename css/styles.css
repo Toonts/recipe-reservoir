@@ -273,22 +273,30 @@ img:hover {
   background-color: rgba(254, 254, 0, 0.598);
 }
 
-#recipeData th:hover {
-  background-color: rgb(238, 121, 121);
-  font-weight: bold;
-}
 
 #allrecipes {
   width: auto;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+   
 }
 #allrecipes thead {
   background-color: rgba(251, 251, 53, 0.6);
   font-size: 1rem;
 }
-#recipeData tr {
-  height: 100px;
+#recipeData td {
+  width: 170px;  
+}
+
+
+button:hover {
+  font-weight: bold;
+  background-color: yellow;
+}
+
+#recipeform{
+  width:1000px;
+  margin:auto; 
 }
 
 /* div {
