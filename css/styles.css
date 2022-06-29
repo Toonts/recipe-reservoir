@@ -107,35 +107,63 @@ input:hover {
   background-color: beige;
 }
 
-#new-ingredients {
+#new-ingredients, #instructions {
   height: 100px;
   overflow: scroll;
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
 }
+
 /*all-recipes.html*/
 
-tr {
-  border: solid;
-  width: 90%;
-  margin: 2rem auto;
-}
-
-table {
+#allrecipes {
   text-align: left;
-  margin: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+#recipe-head{
+  background-color: rgba(109, 207, 82, 0.573);
+  font-size: 1rem;
+}
+.recipe-header {
+  font-family: 'Quicksand', sans-serif;
+  display: inline-block;
+  padding: 1rem;
+  width: 170px;
+  font-weight: bold;
+  padding: 2rem auto;
+  border: 1px solid;
 }
 
-th {
-  padding: 1rem;
-  border-right: solid;
+#recipe-rate{
+  display: block;
+  text-align: center;
+  font-size: 34px;
 }
-td {
+#recipeData td {
+  border-spacing:0;
+  border-collapse: collapse;
+  display: inline-block;
+  height: 200px;
+  width: 170px;
   padding: 1rem;
   overflow: scroll;
-  border-right: solid;
+  line-height: 1.25rem;
+  border: 1px solid;
+}
+
+#recipeData tr:hover {
+  background-color: rgba(109, 207, 82, 0.155);
 }
 
 #remove {
   font-size: smaller;
+}
+
+button:hover {
+  font-weight: bold;
+  background-color: yellow;
 }
 
 /*conversion.html*/
@@ -242,7 +270,6 @@ h2 {
   margin: auto;
 }
 
-
 .member-description {
   display: flex;
   flex-direction: column;
@@ -278,30 +305,8 @@ img:hover {
 /* .recipe-column:hover {
     background-color: rgba(254, 254, 0, 0.598);
   } */
-#recipeData tr:hover {
-  background-color: rgba(254, 254, 0, 0.598);
-}
 
 
-#allrecipes {
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-   
-}
-#allrecipes thead {
-  background-color: rgba(251, 251, 53, 0.6);
-  font-size: 1rem;
-}
-#recipeData td {
-  width: 170px;  
-}
-
-
-button:hover {
-  font-weight: bold;
-  background-color: yellow;
-}
 
 #recipeform{
   width:1000px;

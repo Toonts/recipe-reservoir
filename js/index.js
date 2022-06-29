@@ -93,7 +93,7 @@ function searchRating(event) {
       
     newRecipe.saveAllToLocalStorage();
 
-      let inputs = document.querySelectorAll('#title, #new-ingredients, #instructions')
+      let inputs = document.querySelectorAll('#title, #new-ingredients, #instructions, #rating')
 
       inputs.forEach(input => {
         input.value = '';
