@@ -176,21 +176,21 @@ h2 {
 }
 #conv1 {
   background-color: whitesmoke;
-  width: 80%;
+  width: 60%;
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 #conv2 {
   background-color: whitesmoke;
-  width: 80%;
+  width: 60%;
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
 }
 #conv3 {
   background-color: whitesmoke;
-  width: 20%;
+  width: 15%;
   margin: 2rem auto 4rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
