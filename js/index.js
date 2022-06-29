@@ -16,6 +16,7 @@ let ingredientsValue = document.getElementById("ingredients").value;
 //Search Event Listeners
 input1.addEventListener("keypress", searchTitle);
 input2.addEventListener("keypress", searchIngredient);
+input3.addEventListener("keypress", searchRating);
 
 function searchTitle(event) {
   let table = document.getElementById("tbody");
@@ -45,14 +46,30 @@ function searchIngredient(event) {
     for (let i = 0; i < allRecipes.length; i++) {
       let recipe = allRecipes[i];
       if (recipe.ingredients.toLowerCase().includes(ingredientValue.toLowerCase())) {
-        let tableBody = document.createElement("tbody");
         let tableRow = document.createElement("tr");
-        tableRow.id = i;
         let tableData = document.createElement("td");
-        tableData.innerText = recipe.title;
+        tableData.innerText = recipe.title + "\n \n" + "Ingredients: " + "\n" + recipe.ingredients + "\n \n"+ "Instructions: " + "\n" + recipe.instructions;
         tableRow.appendChild(tableData);
-        tableBody.appendChild(tableRow);
-        table.appendChild(tableBody);
+        table.appendChild(tableRow);
+      }
+    }
+  }
+}
+
+function searchRating(event) {
+  let table = document.getElementById('tbody');
+  let ratingValue = document.getElementById('rating').value;
+  if(event.key === "Enter"){
+    event.preventDefault();
+    table.innerHTML = "";
+    for(let i = 0; i < allRecipes.length; i++){
+      let recipe = allRecipes[i];
+      if (recipe.rating.includes(ratingValue)){
+        let tableRow = document.createElement("tr");
+        let tableData = document.createElement("td");
+        tableData.innerText = recipe.title + "\n \n" + "Ingredients: " + "\n" + recipe.ingredients + "\n \n"+ "Instructions: " + "\n" + recipe.instructions;
+        tableRow.appendChild(tableData);
+        table.appendChild(tableRow);
       }
     }
   }
@@ -65,11 +82,13 @@ function searchIngredient(event) {
       let recipeTitle = id.title.value;
       let recipeIngredients = id.ingredients.value;
       let recipeInstructions = id.instructions.value;
+      let recipeRating = id.rating.value;
   
       let newRecipe = new Recipe(
         recipeTitle,
         recipeIngredients,
         recipeInstructions,
+        recipeRating,
       );
       
     newRecipe.saveAllToLocalStorage();

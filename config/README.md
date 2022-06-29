@@ -15,6 +15,7 @@ A digital space to input recipes, and recall them based on available ingredients
 
 ![Domain Model](img/recipe-reservoir1.png)
 
+
 ## Wireframe on Replit
 
 [Wireframe](https://replit.com/@MandyMason/Recipe-Reservoir#whiteboard.draw)

@@ -3,7 +3,7 @@
 
 let allRecipes = [];
 
-const Recipe = function(title, ingredients, instructions) {
+const Recipe = function(title, ingredients, instructions, rating) {
   this.title = title;
   this.ingredients = ingredients;
   this.instructions = instructions;
