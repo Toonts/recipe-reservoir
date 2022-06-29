@@ -13,7 +13,7 @@ A digital space to input recipes, and recall them based on available ingredients
 
 ## Domain Model on Figma
 
-![Domain Model](config/img/recipe-reservoir1.png)
+![Domain Model](/img/recipe-reservoir1.png)
 
 ## Wireframe on Replit
 
