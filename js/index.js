@@ -26,7 +26,7 @@ function searchTitle(event) {
     table.innerHTML = "";
     for (let i = 0; i < allRecipes.length; i++) {
       let recipe = allRecipes[i];
-      if (recipe.title.includes(nameValue)) {
+      if (recipe.title.toLowerCase().includes(nameValue.toLowerCase())) {
         let tableRow = document.createElement("tr");
         let tableData = document.createElement("td");
         tableData.innerText = recipe.title + recipe.ingredients + recipe.instructions;
@@ -45,7 +45,7 @@ function searchIngredient(event) {
     table.innerHTML = "";
     for (let i = 0; i < allRecipes.length; i++) {
       let recipe = allRecipes[i];
-      if (recipe.ingredients.includes(ingredientValue)) {
+      if (recipe.ingredients.toLowerCase().includes(ingredientValue.toLowerCase())) {
         let tableBody = document.createElement("tbody");
         let tableRow = document.createElement("tr");
         tableRow.id = i;

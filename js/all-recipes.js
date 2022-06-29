@@ -21,6 +21,7 @@ function renderRecipe() {
     title.innerText = recipe.title;
     title.className = i;
     ingredients.innerText = recipe.ingredients;
+    ingredients.setAttribute('align', 'center');
     ingredients.className = i;
     instructions.innerText = recipe.instructions;
     instructions.className = i;

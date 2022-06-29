@@ -14,12 +14,12 @@ h1 {
   color: rgb(6, 6, 83)
 }
 .banner{
-  width: 100%;
+  width: 60%;
+  margin: 0px 20% 3rem 20%;
   height: 150px;
   background-image: url('/Config/img/banner.jpg');
   background-size:100% 150px;
   background-repeat: no-repeat;
-  margin-bottom: 3rem;
 }
 
 .nav-header {
@@ -53,7 +53,7 @@ footer {
 #search-box{
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 25%;
   background-color: rgba(249, 238, 116, 0.783);
   padding: 10px;
   margin: auto;
@@ -61,13 +61,48 @@ footer {
   justify-content: space-between;
 }
 
+ #recipe {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 10px;
+    background-color: rgba(249, 238, 116, 0.783);
+    margin: 25px auto 0px auto;
+    height: 15%;
+    justify-content:space-between;
+  }
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.recipeinput {
+  margin:.5rem;
+  align-content: center;
+}
+
+#submitbutton {
+  width: 100px;
+}
+
+input {
+  font-size: 1rem;
+  font-family: 'PT Serif', serif;
+}
+input:hover {
+  background-color: beige;
+}
 .box:hover{
   background-color: beige;
 }
 .box{
   margin: .5rem;
 }
+#new-ingredients {
+  height:100px;
+  overflow:scroll;
 
+}
 /*all-recipes.html*/
 
 tr {
@@ -185,7 +220,7 @@ h2{
   font-size: 1.2rem;
 }
 .team-member h3{
-  font-family:'titan one', cursive;
+  font-family:'titan one', cursive; 
 }
 img{
   margin-right: 20px;
