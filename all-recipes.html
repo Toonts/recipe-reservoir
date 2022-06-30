@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <title>Recipe Reservoir</title>
   </head>
   <body>
@@ -31,16 +33,8 @@
     </header>
     <main>
       <table id ="allrecipes">
-        <thead>
-          <tr id="headerRow">
-            <th id="remove">click to remove recipe</th>
-            <th class="recipe-column">Recipe Name</th>
-            <th class="recipe-column">Ingredients</th>
-            <th class="recipe-column">Instructions</th>
-            <th class="recipe-column">Rating</th>
-          </tr>
+        <thead id="recipe-head"></thead>
         <tbody id="recipeData"></tbody>
-      </thead>
       </table>
     </main>
     <footer><p>&copy;Copyright Code Fellows</p></footer>

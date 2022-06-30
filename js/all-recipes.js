@@ -1,6 +1,31 @@
 
 'use strict';
 
+let bodyContainer = document.getElementById('recipe-head');
+
+let recipeDel = document.createElement('th');
+recipeDel.innerText = 'Remove Recipe'
+let recipeName = document.createElement('th');
+recipeName.innerText = 'Recipe Name';
+let recipeIng = document.createElement('th');
+recipeIng.innerText = 'Ingredients';
+let recipeInstr = document.createElement('th');
+recipeInstr.innerText = 'Instructions';
+let recipeRate = document.createElement('th');
+recipeRate.innerText = 'Rating';
+
+recipeDel.className = 'recipe-header';
+recipeName.className = 'recipe-header';
+recipeIng.className = 'recipe-header';
+recipeInstr.className = 'recipe-header';
+recipeRate.className = 'recipe-header';
+
+bodyContainer.appendChild(recipeDel);
+bodyContainer.appendChild(recipeName);
+bodyContainer.appendChild(recipeIng);
+bodyContainer.appendChild(recipeInstr);
+bodyContainer.appendChild(recipeRate);
+
 //Render saved recipes
 
 function renderRecipe() {
@@ -11,14 +36,14 @@ function renderRecipe() {
     let recipe = allRecipes[i];
     let newRecipe = document.createElement('tr');
 
-    let remove = document.createElement('th');
+    let remove = document.createElement('td');
     let button = document.createElement('button');
     let title = document.createElement('td');
     let ingredients = document.createElement('td');
     let instructions = document.createElement('td');
     let rating = document.createElement('td');
 
-    newRecipe.clasName = i;
+    newRecipe.className = 'recipe-row';
     button.innerText = 'remove';
     remove.className = i;
     title.innerText = recipe.title;
@@ -29,6 +54,7 @@ function renderRecipe() {
     instructions.className = i;
     rating.innerText = recipe.rating;
     rating.className = i;
+    rating.id = 'recipe-rate';
 
     remove.appendChild(button);
     newRecipe.appendChild(remove);

@@ -1,10 +1,4 @@
 "use strict";
-// Call save & load when recipes are searched for
-
-// Render list of searched recipes
-
-// Pull info from form into constructor function and save (put form in index.html)
-
 //Adding event listeners
 
 const input1 = document.getElementById("name");
@@ -91,7 +85,7 @@ function searchRating(event) {
       );
     newRecipe.saveAllToLocalStorage();
 
-      let inputs = document.querySelectorAll('#title, #new-ingredients, #instructions')
+      let inputs = document.querySelectorAll('#title, #new-ingredients, #instructions, #rating')
 
       inputs.forEach(input => {
         input.value = '';

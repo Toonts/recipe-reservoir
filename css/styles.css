@@ -1,10 +1,9 @@
-/*all html*/
+/*ALL HTML ============================================================================================*/
 
 html {
   background-color: beige;
   font-family: 'Lucida Sans', sans-serif;
 }
-
 h1 {
   font-family: 'titan one', cursive;
   text-align: center;
@@ -21,7 +20,6 @@ h1 {
   background-size: 100% 150px;
   background-repeat: no-repeat;
 }
-
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -51,11 +49,15 @@ textarea {
 textarea:hover {
   background-color: beige;
 }
+
 footer {
+  width:100%;
   text-align: center;
+  margin-top: 100px;
+  margin-bottom: 0;
 }
 
-/*index.html*/
+/*INDEX.HTML ============================================================================================*/
 
 #searchfield {
   display: flex;
@@ -69,7 +71,10 @@ footer {
   justify-content: space-between;
   border: 2px solid black;
 }
-
+#recipeform{
+  width:60%;
+  margin:auto; 
+}
  #recipesdiv {
     display: flex;
     flex-direction: column;
@@ -86,17 +91,24 @@ footer {
 h3 {
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 750;
+  margin: auto;
+  width: 200px;
+  padding-bottom: 10px;
 }
-.recipeinput {
+#search-box div, #recipe div{
+  text-align: center;
+  margin-bottom:10px;
+}
+.recipeinput, .box {
   margin: 0.5rem;
   align-content: center;
+  width: 200px;
 }
-
 #submitbutton {
   width: 100px;
+  margin-top:10px;
 }
-
 input {
   font-size: 1rem;
   font-family: 'PT Serif', serif;
@@ -109,44 +121,63 @@ input:hover {
 .box:hover {
   background-color: beige;
 }
-.box {
-  margin: 0.5rem;
-}
-#new-ingredients {
-
-  overflow:scroll;
-}
-#instructions {
-  overflow:scroll;
-}
-/*all-recipes.html*/
-
-tr {
-  border: solid;
-  width: 90%;
-  margin: 2rem auto;
+#new-ingredients, #instructions {
+  height: 100px;
+  overflow: scroll;
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
 }
 
-table {
+/*ALL-RECIPES.HTML ====================================================================================*/
+
+#allrecipes {
   text-align: left;
-  margin: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-th {
+#recipe-head{
+  background-color: rgba(109, 207, 82, 0.573);
+  font-size: 1rem;
+}
+.recipe-header {
+  font-family: 'Quicksand', sans-serif;
+  display: inline-block;
   padding: 1rem;
-  border-right: solid;
+  width: 170px;
+  font-weight: bold;
+  padding: 2rem auto;
+  border: 1px solid;
 }
-td {
+#recipe-rate {
+  text-align: center;
+  font-size: 34px;
+}
+#recipeData td {
+  border-spacing:0;
+  display: inline-block;
+  height: 200px;
+  width: 170px;
   padding: 1rem;
   overflow: scroll;
-  border-right: solid;
+  line-height: 1.25rem;
+  border: 1px solid;
 }
-
-#remove {
+#recipeData tr:hover {
+  background-color: rgba(109, 207, 82, 0.155);
+}
+.recipe-row button {
   font-size: smaller;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+button:hover {
+  font-weight: bold;
+  background-color: yellow;
 }
 
-/*conversion.html*/
+/*CONVERSION.HTML =======================================================================================*/
 
 h2 {
   text-align: center;
@@ -159,29 +190,27 @@ h2 {
   font-weight: bold;
   padding: 1rem;
 }
-
 #conv1 {
   background-color: whitesmoke;
-  width: 80%;
+  width: 60%;
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 #conv2 {
   background-color: whitesmoke;
-  width: 80%;
+  width: 60%;
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
 }
 #conv3 {
   background-color: whitesmoke;
-  width: 20%;
+  width: 15%;
   margin: 2rem auto 4rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-
 .conv-p {
   display: block;
   margin: auto;
@@ -194,7 +223,6 @@ h2 {
 .conversion #tsp li {
   border-left: none;
 }
-
 .conversion #gallon li {
   border-right: none;
 }
@@ -204,7 +232,6 @@ h2 {
 .conversion #oz-g1 li {
   border-left: none;
 }
-
 .conversion li {
   padding-left: 1rem;
   padding-bottom: 1rem;
@@ -215,7 +242,6 @@ h2 {
   padding: 0.5rem;
   font-family: 'Franklin Gothic Medium', sans-serif;
 }
-
 .conversion li:hover {
   background-color: rgba(254, 254, 0, 0.598);
 }
@@ -226,7 +252,7 @@ h2 {
   background-color: rgba(159, 159, 219, 0.574);
 }
 
-/*about-us.html*/
+/*ABOUT-US.HTML =================================================================================*/
 
 #summary {
   text-align: justify;
@@ -240,90 +266,47 @@ h2 {
   background-color: aliceblue;
 }
 .team-member h3 {
-  font-family: 'titan one', cursive;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.25rem;
-}
-
-h3 {
+  font-weight: bold;
+  color:rgb(6, 6, 83);
+  line-height: 1.5;
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
+  padding-right: 45px;
   width: 20%;
+  margin: auto;
 }
-
 .member-description {
   display: flex;
   flex-direction: column;
   text-align: justify;
-  line-height: 1.25rem;
-  margin-left: 30px;
+  line-height: 1.5rem;
+  font-size: 20px;
   width: 42%;
+  margin: auto;
+}
+img {
+  height: 130px;
+  width: 130px;
+  transition: transform .4s;
+  padding-right: 60px;
+  margin: auto;
+}
+img:hover {
+  transform: scale(1.5);
+}
+.team-member {
+  margin: 30px 20%;
+  display: flex;
+  justify-content: space-between;
   border: .5px solid;
   border-radius: 5px;
   padding: 15px 10px;
   background-color: aliceblue;
 }
 
-img {
-  margin-right: 20px;
-  height: 100px;
-  width: 100px;
-  transition: transform .4s;
-}
-
-img:hover {
-  transform: scale(1.5);
-}
-
-.team-member {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  margin-left: 20%;
-  margin-right: 5%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-/* .recipe-column:hover {
-    background-color: rgba(254, 254, 0, 0.598);
-  } */
-#recipeData tr:hover {
-  background-color: rgba(254, 254, 0, 0.598);
-}
-
-
-#allrecipes {
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-   
-}
-#allrecipes thead {
-  background-color: rgba(251, 251, 53, 0.6);
-  font-size: 1rem;
-}
-#recipeData td {
-  width: 170px;  
-}
-
-
-button:hover {
-  font-weight: bold;
-  background-color: yellow;
-}
-
-#recipeform{
-  width:1000px;
-  margin:auto; 
-}
-
-/* div {
-  display: flex;
-  justify-content: space-around;
-  column-count: 4;
-  width:100%;
-  column-width: 250px;
-} */
+/* MEDIA QUERY ====================================================================================== */
 
 @media screen and (max-width: 600px) {
   .nav-header {
