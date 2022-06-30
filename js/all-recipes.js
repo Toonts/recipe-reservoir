@@ -46,6 +46,7 @@ function renderRecipe() {
 
     newRecipe.className = 'recipe-row';
     button.innerText = 'Remove Recipe';
+    button.className = i;
     remove.className = i;
     title.innerText = recipe.title;
     title.className = i;
@@ -78,10 +79,9 @@ function removeRecipe(event){
   for(let element of deleteRecipe){
     element.innerHTML = null;
   }
-  loadFromLocalStorage();
-
   allRecipes.splice(event.target.className, 1);
   Recipe.prototype.saveAllToLocalStorage();
+  loadFromLocalStorage();
   location.reload();
 }
 
