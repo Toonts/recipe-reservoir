@@ -4,7 +4,7 @@
 let bodyContainer = document.getElementById('recipe-head');
 
 let recipeDel = document.createElement('th');
-recipeDel.innerText = 'remove recipe'
+recipeDel.innerText = 'Remove Recipe'
 let recipeName = document.createElement('th');
 recipeName.innerText = 'Recipe Name';
 let recipeIng = document.createElement('th');
