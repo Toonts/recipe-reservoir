@@ -16,7 +16,7 @@ h1 {
   width: 60%;
   margin: 0px 20% 3rem 20%;
   height: 150px;
-  background-image: url('/config/img/banner.jpg');
+  background-image: url('recipe-reservoir/config/img/banner.jpg');
   background-size: 100% 150px;
   background-repeat: no-repeat;
 }
