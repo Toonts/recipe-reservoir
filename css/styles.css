@@ -336,10 +336,34 @@ img:hover {
   li {
     padding: 20px;
   }
-  #food {
-    table-layout: fixed;
-    width: 375px;
-    font-size: 0.7rem;
-    overflow-wrap: break-word;
+
+  #searchfield {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55%;
+  background-color: rgba(249, 238, 116, 0.783);
+  padding: 10px;
+  margin: auto;
+  height: 15%;
+  justify-content: space-between;
+  border: 2px solid black;
+
   }
-}
+  #recipesdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    padding: 10px;
+    background-color: rgba(249, 238, 116, 0.783);
+    margin: 25px auto 0px auto;
+    height: 15%;
+    justify-content:space-between;
+    border: 2px solid black;
+  }
+
+  }
+ 
+  
+
