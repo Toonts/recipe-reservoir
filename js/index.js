@@ -5,7 +5,6 @@ const input1 = document.getElementById("name");
 const input2 = document.getElementById("ingredients");
 const input3 = document.getElementById("rating");
 const form = document.getElementById("newrecipes");
-let ingredientsValue = document.getElementById("ingredients").value;
 
 //Search Event Listeners
 input1.addEventListener("keypress", searchTitle);
@@ -84,7 +83,6 @@ function searchRating(event) {
         recipeInstructions,
         recipeRating,
       );
-      
     newRecipe.saveAllToLocalStorage();
 
       let inputs = document.querySelectorAll('#title, #new-ingredients, #instructions, #rating')
