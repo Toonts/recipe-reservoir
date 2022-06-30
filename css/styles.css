@@ -69,6 +69,7 @@ footer {
   border: 2px solid black;
 }
 #recipeform{
+  display: block;
   width:60%;
   margin:auto; 
 }
@@ -80,6 +81,10 @@ footer {
   background: white;
   border: 2px solid;
 }
+#recipeform td::first-line{
+  font-weight: bold;
+ }
+
 #recipeform tr:nth-child(even){
   background: aliceblue;
 }
