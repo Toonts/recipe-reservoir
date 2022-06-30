@@ -175,6 +175,7 @@ input:hover {
   overflow: scroll;
   line-height: 1.25rem;
   border: 1px solid;
+  margin-bottom: -4px;
 }
 #recipeData tr:hover {
   background-color: rgba(109, 207, 82, 0.155);
