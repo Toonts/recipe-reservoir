@@ -6,19 +6,19 @@ html {
 }
 
 h1 {
-  font-family: "titan one", cursive;
+  font-family: 'titan one', cursive;
   text-align: center;
   font-size: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  color: rgb(6, 6, 83)
+  color: rgb(6, 6, 83);
 }
-.banner{
+.banner {
   width: 60%;
   margin: 0px 20% 3rem 20%;
   height: 150px;
   background-image: url('/config/img/banner.jpg');
-  background-size:100% 150px;
+  background-size: 100% 150px;
   background-repeat: no-repeat;
 }
 
@@ -32,14 +32,14 @@ h1 {
   font-family: 'Lucida Sans', sans-serif;
   text-decoration: none;
 }
-a{
+a {
   text-decoration: none;
-  color:whitesmoke;
+  color: whitesmoke;
   background-color: rgb(49, 120, 196);
   border: 1px solid navy;
   padding: 8px;
 }
-a:hover{
+a:hover {
   background-color: rgb(119, 157, 199);
 }
 #rating {
@@ -53,7 +53,6 @@ textarea:hover {
 }
 footer {
   text-align: center;
-
 }
 
 /*index.html*/
@@ -83,13 +82,14 @@ footer {
     justify-content:space-between;
     border: 2px solid black;
   }
+
 h3 {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 800;
 }
 .recipeinput {
-  margin:.5rem;
+  margin: 0.5rem;
   align-content: center;
 }
 
@@ -106,13 +106,14 @@ input {
 input:hover {
   background-color: beige;
 }
-.box:hover{
+.box:hover {
   background-color: beige;
 }
-.box{
-  margin: .5rem;
+.box {
+  margin: 0.5rem;
 }
 #new-ingredients {
+
   overflow:scroll;
 }
 #instructions {
@@ -128,7 +129,7 @@ tr {
 
 table {
   text-align: left;
-  margin:auto;
+  margin: auto;
 }
 
 th {
@@ -141,110 +142,143 @@ td {
   border-right: solid;
 }
 
-#remove{
+#remove {
   font-size: smaller;
 }
 
 /*conversion.html*/
 
-h2{
+h2 {
   text-align: center;
   font-family: 'Franklin Gothic Medium', sans-serif;
   font-size: 2rem;
   padding: 0 2rem;
 }
 
-.list-head{
+.list-head {
   font-weight: bold;
   padding: 1rem;
 }
 
-#conv1{
+#conv1 {
   background-color: whitesmoke;
   width: 80%;
   margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(7,1fr);
-  
+  grid-template-columns: repeat(7, 1fr);
 }
-#conv2{
+#conv2 {
   background-color: whitesmoke;
   width: 80%;
   margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(8,1fr);
-  
+  grid-template-columns: repeat(8, 1fr);
 }
-#conv3{
+#conv3 {
   background-color: whitesmoke;
   width: 20%;
   margin: 2rem auto 4rem;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.conv-p{
+.conv-p {
   display: block;
   margin: auto;
   text-align: center;
   font-size: medium;
   font-family: 'Franklin Gothic Medium', sans-serif;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
 }
-.conversion #tsp li{
+.conversion #tsp li {
   border-left: none;
 }
 
-.conversion #gallon li{
+.conversion #gallon li {
   border-right: none;
 }
-.conversion #tsp-ml1 li{
+.conversion #tsp-ml1 li {
   border-left: none;
 }
-.conversion #oz-g1 li{
+.conversion #oz-g1 li {
   border-left: none;
 }
 
-.conversion li{
+.conversion li {
   padding-left: 1rem;
   padding-bottom: 1rem;
-  border-left: .5px solid black;
+  border-left: 0.5px solid black;
   border-top: none;
   border-bottom: 1px solid black;
   text-align: center;
-  padding: .5rem;
-  font-family:'Franklin Gothic Medium', sans-serif;
+  padding: 0.5rem;
+  font-family: 'Franklin Gothic Medium', sans-serif;
 }
 
-.conversion li:hover{
+.conversion li:hover {
   background-color: rgba(254, 254, 0, 0.598);
 }
-#tsp-ml1, #tsp-ml2, #oz-ml1, #oz-ml2{
+#tsp-ml1,
+#tsp-ml2,
+#oz-ml1,
+#oz-ml2 {
   background-color: rgba(159, 159, 219, 0.574);
 }
 
 /*about-us.html*/
 
-#summary{
-  text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
+#summary {
+  text-align: justify;
+  margin-left: 20%;
+  margin-right: 20%;
   margin-bottom: 2rem;
   font-size: 1.2rem;
+  border: .5px solid;
+  border-radius: 5px;
+  padding: 15px 10px;
+  background-color: aliceblue;
 }
-.team-member h3{
-  font-family:'titan one', cursive; 
+.team-member h3 {
+  font-family: 'titan one', cursive;
+  font-size: 1.25rem;
 }
-img{
+
+h3 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  width: 20%;
+}
+
+.member-description {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  line-height: 1.25rem;
+  margin-left: 30px;
+  width: 42%;
+  border: .5px solid;
+  border-radius: 5px;
+  padding: 15px 10px;
+  background-color: aliceblue;
+}
+
+img {
   margin-right: 20px;
   height: 100px;
   width: 100px;
+  transition: transform .4s;
 }
-.team-member{
-  margin-top: 2rem;
-  margin-left: 5%;
+
+img:hover {
+  transform: scale(1.5);
+}
+
+.team-member {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 20%;
   margin-right: 5%;
   display: flex;
   justify-content: flex-start;
@@ -253,28 +287,35 @@ img{
 /* .recipe-column:hover {
     background-color: rgba(254, 254, 0, 0.598);
   } */
-  #recipeData tr:hover {
-    background-color: rgba(254, 254, 0, 0.598);
-  }
+#recipeData tr:hover {
+  background-color: rgba(254, 254, 0, 0.598);
+}
 
-  #recipeData th:hover {
-    background-color: rgb(238, 121, 121); 
-    font-weight: bold;
-  }
 
-  #allrecipes{
-    width:auto;
-    margin-left: 25px;
-    margin-right:25px;
-  }
-  #allrecipes thead{
-    background-color: rgba(251, 251, 53, 0.6);
-    font-size: 1rem;
-    
-  }
-  #recipeData tr{
-    height:100px; 
-  }
+#allrecipes {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+   
+}
+#allrecipes thead {
+  background-color: rgba(251, 251, 53, 0.6);
+  font-size: 1rem;
+}
+#recipeData td {
+  width: 170px;  
+}
+
+
+button:hover {
+  font-weight: bold;
+  background-color: yellow;
+}
+
+#recipeform{
+  width:1000px;
+  margin:auto; 
+}
 
 /* div {
   display: flex;
@@ -291,12 +332,12 @@ img{
     align-items: flex-start;
   }
   li {
-    padding: 20px; 
+    padding: 20px;
   }
   #food {
-    table-layout:fixed;
+    table-layout: fixed;
     width: 375px;
-    font-size: .7rem; 
+    font-size: 0.7rem;
     overflow-wrap: break-word;
   }
 }

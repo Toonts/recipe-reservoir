@@ -12,13 +12,14 @@ function renderRecipe() {
     let newRecipe = document.createElement('tr');
 
     let remove = document.createElement('th');
+    let button = document.createElement('button');
     let title = document.createElement('td');
     let ingredients = document.createElement('td');
     let instructions = document.createElement('td');
     let rating = document.createElement('td');
 
     newRecipe.clasName = i;
-    remove.innerText = 'remove';
+    button.innerText = 'remove';
     remove.className = i;
     title.innerText = recipe.title;
     title.className = i;
@@ -29,6 +30,7 @@ function renderRecipe() {
     rating.innerText = recipe.rating;
     rating.className = i;
 
+    remove.appendChild(button);
     newRecipe.appendChild(remove);
     newRecipe.appendChild(title);
     newRecipe.appendChild(ingredients);
@@ -36,7 +38,7 @@ function renderRecipe() {
     newRecipe.appendChild(rating);
     bodyContainer.appendChild(newRecipe);
     //Event listener
-    remove.addEventListener('click', removeRecipe);
+    button.addEventListener('click', removeRecipe);
   }
 }
 
@@ -53,39 +55,18 @@ function removeRecipe(event){
   location.reload();
 }
 
-// function rateRecipe(event){
-//   event.preventDefault();
-//   let userRating = prompt('Rate this recipe 1-5');
-//     if (userRating < 1 || userRating > 5){
-//       userRating = prompt('Rate this recipe 1-5');
-//     }
-//   for(let i = 0; i < allRecipes.length; i++){
-//     let ratingContainer = document.getElementById(i);
-//     if (ratingContainer.id == event.target.id){
-//       event.target.innerText = userRating;
-//     }
-//   }
-// }
-
 renderRecipe();
-
-  
-
-
 
 function loadFromLocalStorage() {
   let loadRecipe = JSON.parse(localStorage.getItem("recipebook")) || [];
   allRecipes = loadRecipe;
 }
 
-
-
  function removeIngredientsFromPage(event) {
    event.preventDefault();
 allRecipes.removeIngredients(event.target.id);
   allRecipes.saveAllToLocalStorage();
-   
- }
+}
 
  function removeIngredients() {
 let index = allRecipes.indexOf(recipe);
