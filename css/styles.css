@@ -154,7 +154,7 @@ input:hover {
   font-size: smaller;
   text-align: center;
   display: block;
-  margin: 50% auto;
+  margin: auto;
 }
 button:hover {
   font-weight: bold;
