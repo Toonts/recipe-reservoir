@@ -75,15 +75,11 @@ function renderRecipe() {
 
 function removeRecipe(event){
   event.preventDefault();
-  console.log(event.target.className);
   let deleteRecipe = document.getElementsByClassName(event.target.className);
   for(let element of deleteRecipe){
-    console.log(element);
     element.innerHTML = null;
   }
-
   allRecipes.splice(event.target.className, 1);
-  console.log(allRecipes);
   Recipe.prototype.saveAllToLocalStorage();
   loadFromLocalStorage();
   location.reload();
