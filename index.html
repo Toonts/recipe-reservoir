@@ -6,10 +6,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap"
+      rel="stylesheet"
+    />
     <title>Recipe Reservoir</title>
   </head>
   <body>
@@ -25,48 +31,83 @@
     </header>
     <main>
       <section id="search-box">
-        <h3> Search Recipes
-        </h3>
-      <div class="name">
-        <input type="search" class="box" id="name" placeholder="Search by name"/> </div>
-      <div class="ingredients">
-        <input type="search" class="box" id="ingredients" placeholder="Search by ingredients" /> </div>
-      <div class="rating">
-        <input type="search" class="box" id="rating" placeholder="Search by rating"/> </div>
+       
+        <div id="searchfield">
+          <h3>Search Recipes</h3>
+          <input
+            type="search"
+            class="box"
+            id="name"
+            placeholder="Search by name"
+          />
+          <input
+            type="search"
+            class="box"
+            id="ingredients"
+            placeholder="Search by ingredients"
+          />
+          <input
+            type="search"
+            class="box"
+            id="rating"
+            placeholder="Search by rating"
+          />
+        </div>
       </section>
 
-
-      <section id = "recipe">
-        <form id = "newrecipes">
-          <h3>Add New Recipe</h3>
-            <div class >
-              <input id = "title" class="recipeinput" type = "text" name = "title" placeholder="Enter recipe title" required="required"/>
-            </div>
-            <div>
-              <input id= "new-ingredients" class="recipeinput" type = "text" placeholder="Enter Ingredients" name = "ingredients" required="required"/>
-            </div>
-            <div>
-              <input id= "instructions" class="recipeinput" type="text" placeholder="Enter recipe instructions"  name = "instructions" required="required"> 
-            </div>
-            <div>
-              <input id="rating" class="recipeinput" type="number" placeholder="Rate this recipe" name="rating" required="required" min="1" max="5">
-            </div>
-        </input>
-
-        <div>
-      <input type="submit" name="submit" id = "submitbutton"/>
-    </div>
+      <section id="recipe">
+        <form id ="newrecipes">
+          <div id="recipesdiv">
+            <h3>Add New Recipe</h3>
+            <input
+              id="title"
+              class="recipeinput"
+              type="text"
+              name="title"
+              placeholder="Enter recipe title"
+              required="required"
+            />
+            <textarea
+              id="new-ingredients"
+              cols="45"
+              rows="5"
+              class="recipeinput"
+              placeholder="Enter Ingredients"
+              name="ingredients"
+              style="resize:none"
+            
+            >
+            </textarea>
+            <textarea
+              id="instructions"
+              cols="45"
+              rows="5"
+              class="recipeinput"
+              placeholder="Enter recipe instructions"
+              name="instructions"
+              style="resize:none"
+            >
+            </textarea>
+            <input
+              text
+              id="rating"
+              class="recipeinput"
+              type="number"
+              placeholder="Rate this recipe"
+              name="rating"
+              min="1"
+              max="5"
+            />
+            <input type="submit" name="submit" id="submitbutton" />
+          </div>
         </form>
       </section>
 
-      <section id = "recipeform">
-        <table id = "table">
-          <tbody id = "tbody">
-
-          </tbody>
-          </table>
+      <section id="recipeform">
+        <table id="table">
+          <tbody id="tbody"></tbody>
+        </table>
       </section>
-
     </main>
     <footer><p>&copy;Copyright Code Fellows</p></footer>
     <script src="js/app.js"></script>

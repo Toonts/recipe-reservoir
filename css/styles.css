@@ -42,7 +42,15 @@ a{
 a:hover{
   background-color: rgb(119, 157, 199);
 }
-
+#rating {
+  width: 150px
+}
+textarea {
+  width:80%;
+}
+textarea:hover {
+  background-color: beige;
+}
 footer {
   text-align: center;
 
@@ -50,26 +58,30 @@ footer {
 
 /*index.html*/
 
-#search-box {
+#searchfield {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 25%;
   background-color: rgba(249, 238, 116, 0.783);
   padding: 10px;
   margin: auto;
   height: 15%;
   justify-content: space-between;
+  border: 2px solid black;
 }
 
- #recipe {
+ #recipesdiv {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 25%;
     padding: 10px;
     background-color: rgba(249, 238, 116, 0.783);
     margin: 25px auto 0px auto;
     height: 15%;
     justify-content:space-between;
+    border: 2px solid black;
   }
 h3 {
   text-align: center;
@@ -88,6 +100,8 @@ h3 {
 input {
   font-size: 1rem;
   font-family: 'PT Serif', serif;
+  justify-content: center;
+  width:80%;
 }
 input:hover {
   background-color: beige;
@@ -99,9 +113,10 @@ input:hover {
   margin: .5rem;
 }
 #new-ingredients {
-  height:100px;
   overflow:scroll;
-
+}
+#instructions {
+  overflow:scroll;
 }
 /*all-recipes.html*/
 

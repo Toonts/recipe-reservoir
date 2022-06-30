@@ -23,7 +23,6 @@ function renderRecipe() {
     title.innerText = recipe.title;
     title.className = i;
     ingredients.innerText = recipe.ingredients;
-    ingredients.setAttribute('align', 'center');
     ingredients.className = i;
     instructions.innerText = recipe.instructions;
     instructions.className = i;
@@ -51,6 +50,7 @@ function removeRecipe(event){
 
   allRecipes.splice(event.target.className, 1);
   Recipe.prototype.saveAllToLocalStorage();
+  location.reload();
 }
 
 // function rateRecipe(event){
