@@ -42,20 +42,24 @@ function renderRecipe() {
     let ingredients = document.createElement('td');
     let instructions = document.createElement('td');
     let rating = document.createElement('td');
+    let ratingValue = document.createElement('p');
 
     newRecipe.className = 'recipe-row';
-    button.innerText = 'remove';
+    button.innerText = 'Remove Recipe';
     remove.className = i;
     title.innerText = recipe.title;
     title.className = i;
+    title.id = 'append-title';
     ingredients.innerText = recipe.ingredients;
     ingredients.className = i;
     instructions.innerText = recipe.instructions;
     instructions.className = i;
-    rating.innerText = recipe.rating;
+    ratingValue.innerText = recipe.rating;
     rating.className = i;
-    rating.id = 'recipe-rate';
+    ratingValue.id = 'recipe-rate';
+    ratingValue.className = i;
 
+    rating.appendChild(ratingValue);
     remove.appendChild(button);
     newRecipe.appendChild(remove);
     newRecipe.appendChild(title);
